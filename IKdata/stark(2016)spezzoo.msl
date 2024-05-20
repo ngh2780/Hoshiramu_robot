@@ -1,0 +1,3079 @@
+beginmuscle defaultmuscle
+	beginactiveforcelengthcurve
+		(-35.0, 0.0)
+		( 0.0, 0.0)
+		( 0.401, 0.0)
+		( 0.402, 0.0)
+		( 0.4035, 0.0)
+		( 0.52725, 0.226667)
+		( 0.62875, 0.636667)
+		( 0.71875, 0.856667)
+		( 0.86125, 0.95)
+		( 1.045, 0.993333)
+		( 1.2175, 0.77)
+		( 1.43875, 0.246667)
+		( 1.61875, 0.0)
+		( 1.62, 0.0)
+		( 1.621, 0.0)
+		( 2.2, 0.0)
+		(35.0, 0.0)
+	endactiveforcelengthcurve
+	beginpassiveforcelengthcurve
+		(-35.0, 0.0)
+		( 0.998, 0.0)
+		( 0.999, 0.0)
+		( 1.15, 0.0)
+		( 1.25, 0.035)
+		( 1.35, 0.12)
+		( 1.45, 0.26)
+		( 1.55, 0.55)
+		( 1.65, 1.17)
+		( 1.75, 2.0)
+		( 1.7501, 2.0)
+		( 1.7502, 2.0)
+		(35.0, 2.0)
+	endpassiveforcelengthcurve
+	begintendonforcelengthcurve
+		(-10.0, 0.0)
+		(-0.002, 0.0)
+		(-0.001, 0.0)
+		( 0.0, 0.0)
+		( 0.00131, 0.0108)
+		( 0.00281, 0.0257)
+		( 0.00431, 0.0435)
+		( 0.00581, 0.0652)
+		( 0.00731, 0.0915)
+		( 0.00881, 0.123)
+		( 0.0103, 0.161)
+		( 0.0118, 0.208)
+		( 0.0123, 0.227)
+		( 9.2,345.0)
+		( 9.201,345.0)
+		( 9.202,345.0)
+		(20.0,345.0)
+	endtendonforcelengthcurve
+	muscle_model 4
+	optimal_fiber_length 0.0535 /* m */
+	tendon_slack_length 0.078 /* m */
+	pennation_angle  0.0
+	max_contraction_velocity 12.0 /* m/s */
+	max_force   100.0 /* N=kg*m/s² */
+	visible yes
+	min_thickness 0.0 /* m - not shown at Force = 0 */
+	max_thickness 0.0035 /* m */
+endmuscle
+
+beginmuscle left_trapezius_cervical
+	beginpoints
+		 0.020154558348341 -0.000621088781711 -0.01189018087622 segment left_scapula
+		 0 -0.0102899999999999 0.06891 segment cervix
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 44.3399763507153 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.069551388611038 /* m */
+	tendon_slack_length 0.038588239124009 /* m */
+	pennation_angle 7.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_trapezius_thoracic
+	beginpoints
+		 0.017877317112401 0.0024834886869581 0.008091073721506 segment left_scapula
+		 0.00632 -0.1179 0.16775 segment thorax
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 58.8333827530661 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.075479746823125 /* m */
+	tendon_slack_length 0.039190444082944 /* m */
+	pennation_angle 10
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_rhomboideus_thoracic
+	beginpoints
+		 0.002857620016047 0.047355441871869 0.037555215695301 segment left_scapula
+		 0.00608 -0.11277 0.16399 segment thorax
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 58.9097943809668 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.043447249701701 /* m */
+	tendon_slack_length 0.030942195916544 /* m */
+	pennation_angle 11.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_rhomboideus_cervicis
+	beginpoints
+		 -0.018544316732176 0.007714496518657 0.049625779681885 segment left_scapula
+		 -0.00274 -0.14652 0.08612 segment cervix
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 101.786628380852 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.054501379309236 /* m */
+	tendon_slack_length 0.196371407127155 /* m */
+	pennation_angle 12.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_latissimus_dorsi
+	beginpoints
+		 -0.00084 0.07482 0.19937 segment thorax
+		 -0.012086744517511 0.024393177046702 -0.151195749945491 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 125.154500626919 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.336797083781484 /* m */
+	tendon_slack_length 0.026126016218516 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_brachiocephalicus_1
+	beginpoints
+		 0.001638206660917 -0.003978322511657 -0.074878887288711 segment left_humerus
+		 -0.00386862322041 -0.021816822294315 -0.028072154571383 segment left_humerus
+		 0.00006 -0.11578 0.08114 segment cervix
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 18.4663057779484 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.287562981142236 /* m */
+	tendon_slack_length 0.017344760548807 /* m */
+	pennation_angle 1
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_brachiocephalicus_2
+	beginpoints
+		 0.001638206660917 -0.003978322511657 -0.074878887288711 segment left_humerus
+		 -0.00386862322041 -0.021816822294315 -0.028072154571383 segment left_humerus
+		 0.02375 -0.21087 0.05245 segment cervix
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 18.4663057779484 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.217607406150422 /* m */
+	tendon_slack_length 0.01312529289526 /* m */
+	pennation_angle 1
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_serratus_1
+	beginpoints
+		 0.02624 -0.01886 -0.02412 segment cervix
+		 -0.005686546528648 0.0036379642230431 0.024821479121758 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.086547793352585 /* m */
+	tendon_slack_length 0.048377494601176 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_2
+	beginpoints
+		 0.01914 -0.0504399999999999 -0.02618 segment cervix
+		 -0.006833004062634 -0.00541455993582 0.025592602863633 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.081390364164054 /* m */
+	tendon_slack_length 0.045494653883243 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_3
+	beginpoints
+		 0.02026 -0.0758399999999999 0.00084 segment cervix
+		 -0.006728207355678 -0.011841292222902 0.028825792096038 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.080322187829364 /* m */
+	tendon_slack_length 0.044897576905739 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_4
+	beginpoints
+		 0.02258 -0.0942099999999999 0.02007 segment cervix
+		 -0.007964078494193 -0.023556059500861 0.027345248844764 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.098873730885911 /* m */
+	tendon_slack_length 0.055267306038005 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_5
+	beginpoints
+		 0.02509 -0.1099899999999999 0.03679 segment cervix
+		 -0.00764679379455 -0.0080107770722369 0.043087963325388 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.097580192381912 /* m */
+	tendon_slack_length 0.05454425869538 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_6
+	beginpoints
+		 0.07414 -0.01866 0.01374 segment thorax
+		 0.004152274356236 0.057583087353946 0.023361047997688 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.067640308677444 /* m */
+	tendon_slack_length 0.079348009170654 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_7
+	beginpoints
+		 0.07205 -0.04904 0.00649 segment thorax
+		 0.000040634112549 0.051039189940629 0.027373040626239 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.069661343041051 /* m */
+	tendon_slack_length 0.081718859575587 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_8
+	beginpoints
+		 0.05734 -0.08359 -0.00597 segment thorax
+		 -0.002005745892558 0.045059259470181 0.033531878163732 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.066293874404122 /* m */
+	tendon_slack_length 0.077768523784556 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_9
+	beginpoints
+		 0.05623 -0.11696 0.00059 segment thorax
+		 -0.003432740239913 0.037870141864205 0.038336076101336 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068821726111446 /* m */
+	tendon_slack_length 0.080733915344362 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_10
+	beginpoints
+		 0.05173 -0.14994 0.0012 segment thorax
+		 -0.004964391209851 0.028584520234261 0.044301735906211 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068472331082057 /* m */
+	tendon_slack_length 0.080324044358582 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_11
+	beginpoints
+		 0.03682 -0.18139 0.00511 segment thorax
+		 -0.005871465819663 0.01933380432582 0.042178151902137 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.066211881662085 /* m */
+	tendon_slack_length 0.077672339113399 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_serratus_12
+	beginpoints
+		 0.03331 -0.2001 0.00603 segment thorax
+		 -0.005097744821052 0.012677467139823 0.03350671376757 segment left_scapula
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.048707907950418 /* m */
+	tendon_slack_length 0.057138644135461 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_pectoralis_profundus
+	beginpoints
+		 -0.005466925884924 -0.012844487355727 0.012544110812435 segment left_humerus
+		 0-0.00001 -0.10342 -0.06043 0 thorax
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.114091768341709 /* m */
+	tendon_slack_length 0.028702331658292 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_pectoralis_superficialis
+	beginpoints
+		 -0.003107408811865 -0.013185129997354 -0.026464444785491 segment left_humerus
+		 0-0.00003 -0.1978699999999999 -0.05229 0 thorax
+	endpoints
+	begingroups
+		left_regio_thoracicae
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.052363217687075 /* m */
+	tendon_slack_length 0.017613082312925 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+
+beginmuscle left_supraspinatus
+	beginpoints
+		 0.004928456960543 -0.011596354703162 -0.00602660431928 segment left_scapula
+		 0.003891996322162 -0.0056535614561829 0.0261135408561619 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 280.25079319635 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.045256044597594 /* m */
+	tendon_slack_length 0.07564412044452 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_infraspinatus
+	beginpoints
+		 0.011759515406095 0.019392370836794 -0.007862939448868 segment left_scapula
+		 0.013195803880742 -0.002097807916411 0.016605363799513 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 362.58599099807 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.030351251137223 /* m */
+	tendon_slack_length 0.097525421415366 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_subscapularis
+	beginpoints
+		 -0.001852594852237 0.010901819243467 -0.010940621899772 segment left_scapula
+		 -0.017779668848389 0.013791301692835 0.019163863977726 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 481.319576552922 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.020870072838485 /* m */
+	tendon_slack_length 0.086865111706616 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_deltoideus_sca
+	beginpoints
+		 0.017721178493239 0.003865961573036 0.004613015839946 segment left_scapula
+		 0.012969798485173 -0.009329429249 -0.022934313873598 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 91.3261599825511 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.074443078216035 /* m */
+	tendon_slack_length 0.08381445163434 /* m */
+	pennation_angle 10
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_deltoideus_acr
+	beginpoints
+		 0.025973289356837 -0.007613362639328 -0.08822066925827 segment left_scapula
+		 0.009924597306516 -0.012565230842872 -0.03180478582563 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 135.512273163552 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.023956674138843 /* m */
+	tendon_slack_length 0.058059864102718 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_teres_major
+	beginpoints
+		 0.009751655469352 0.053062332560075 0.011393922233201 segment left_scapula
+		 -0.010636288635747 -0.005808150566477 -0.02888821993867 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 61.8575475515986 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.133654977272727 /* m */
+	tendon_slack_length 0.034368422727273 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_teres_minor
+	beginpoints
+		 0.007655489116164 0.018710345635002 -0.056311545021597 segment left_scapula
+		 0.013929641436512 0.004130514345539 0.006905276156693 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 43.5701845331733 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02790920748554 /* m */
+	tendon_slack_length 0.044686093713645 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+endmuscle
+beginmuscle left_coracobrachialis
+	beginpoints
+		 -0.00817776973975 -0.0164935529910859 -0.091828775462213 segment left_scapula
+		 -0.010341820828318 -0.000151690181129 -0.031400944027499 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_deltoidea
+	endgroups
+	max_force 39.7501530047722 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.022761309507983 /* m */
+	tendon_slack_length 0.057791827206578 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle left_biceps_brachii
+	beginpoints
+		 0.001004534475441 -0.014366245627917 -0.096525759537633 segment left_scapula
+		 -0.011106794389788 -0.0051754737239 -0.013760813735416 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 195.591213439937 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.050057182212967 /* m */
+	tendon_slack_length 0.167724561935613 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_brachialis
+	beginpoints
+		 0.006121036476696 0.0128472286768411 -0.128143182014415 segment left_scapula
+		 -0.01140924491058 -0.00666645180718 -0.00757890347446 segment left_antebrachium
+		 -0.008196260653096 0.01164370057556 -0.017212119342572 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 61.7708217098157 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.064383033658922 /* m */
+	tendon_slack_length 0.101967243566243 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_triceps_caput_longum /* complex with second head - !!!missing!!! */
+	beginpoints
+		 0.00266034172798 0.0136837902012861 -0.067950339463258 segment left_scapula
+		 -0.005421396283776 0.03170792111088 0.029052226107168 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 549.249122471397 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068777876659972 /* m */
+	tendon_slack_length 0.120038210055986 /* m */
+	pennation_angle 21
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_triceps_caput_laterale /*  similar to triceps caput accessorium */
+	beginpoints
+		 0.013220747189861 -0.0033723056379859 -0.0115539780005661 segment left_humerus
+		 0.004279553434552 0.03011875384544 0.015832674547164 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.058893722772642 /* m */
+	tendon_slack_length 0.093146131705249 /* m */
+	pennation_angle 2.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_triceps_caput_accessorium /*  similar to triceps caput laterale */
+	beginpoints
+		 -0.01070222650048 0.03555467261388 0.02132109019394 segment left_antebrachium
+		 0.003242795454685 0.020530102455459 0.004481850022161 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 73.2712356516969 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.064477666284105 /* m */
+	tendon_slack_length 0.042853720962645 /* m */
+	pennation_angle 2.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_triceps_caput_medial /*  smallest */
+	beginpoints
+		 -0.013914398640588 0.00829574803916 0.037459942314784 segment left_antebrachium
+		 -0.011374204287653 -0.003796421102053 -0.027226971266084 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 105.460468434411 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068151304351246 /* m */
+	tendon_slack_length 0.1118118420379 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_anconeus
+	beginpoints
+		 0.005736356497344 0.02437649358713 -0.1532630556696 segment left_humerus
+		 0.007829775657684 0.00014684205578 0.028272811699288 segment left_antebrachium
+		 0.007561889215448 -0.00225702569366 0.029802726349136 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 57.1837917627338 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.007607531324928 /* m */
+	tendon_slack_length 0.021063489681436 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+beginmuscle left_pronator_teres
+	beginpoints
+		 -0.019274010870615 0.010234819470191 -0.137531666708181 segment left_humerus
+		 -0.018892963067088 -0.00393677288694 0.004531733282584 segment left_antebrachium
+		 -0.010223120266804 -0.00997051403788 -0.062586383396828 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_brachialis
+	endgroups
+	max_force 67.8817729779644 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01143051972885 /* m */
+	tendon_slack_length 0.078732490165643 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+
+/* supinator */
+beginmuscle left_supinator
+	beginpoints
+		 0.012822990689415 0.002751823663273 -0.1447443132248261 segment left_humerus
+		 0.012944762931396 -0.00103829332088 0.002963264895872 segment left_antebrachium
+		 -0.000670676331784 -0.00774212755796 -0.036055005140188 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 11.9977072936548 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.031336483568477 /* m */
+	tendon_slack_length 0.012685112713324 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+endmuscle
+/* left_flexor_carpi_radialis */
+beginmuscle left_flexor_carpi_radialis
+	beginpoints
+		 0.011258055627396 0.0173509203360151 -0.112592009958326 segment left_humerus
+		 -0.006305999321768 -0.0153403332657 -0.066674477766576 segment left_antebrachium
+		 -0.012650248046766 -0.005858857597689 -0.003933137870988 segment left_carpus
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 57.4630094959502 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.074065960861206 /* m */
+	tendon_slack_length 0.161628393081264 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+/* left_flexor_carpi_ulnaris */
+beginmuscle left_flexor_carpi_ulnaris
+	beginpoints
+		 0.013152721960569 0.00979874715276 -0.14650383720785 segment left_humerus
+		 0.008709615667604 0.01615985741226 -0.103713730761572 segment left_antebrachium
+		 0.012171533365658 0.005124491983762 -0.001799017541155 segment left_carpus
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 283.440636679128 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.023937234510014 /* m */
+	tendon_slack_length 0.228689858977996 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+	 wrapobject left_carpus
+endmuscle
+/* pronator teres */
+/* left_extensor_carpi_ulnaris */
+beginmuscle left_extensor_carpi_ulnaris
+	beginpoints
+		 -0.008173769428776 0.013702124013741 0.025044561751575 segment left_carpus
+		 -0.00833603233304 0.0254716376638 0.00467099148502 segment left_antebrachium
+		 -0.009900520351782 0.03676050039299 -0.142086314595295 segment left_humerus
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 135.35755884618 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.017934075189491 /* m */
+	tendon_slack_length 0.229595746139843 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+	 wrapobject left_carpus
+endmuscle
+/* left_extensor_carpi_radialis */
+beginmuscle left_extensor_carpi_radialis
+	beginpoints
+		 -0.019129256864996 0.012762159728051 -0.14298345518497 segment left_humerus
+		 -0.021390171711908 -0.00239793047956 -0.017097092169456 segment left_antebrachium
+		 -0.020954202235978 0.009417550308247 0.003657873694031 segment left_carpus
+		 -0.009928926348826 0.008441936294002 -0.026314242555136 segment left_carpus
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 117.639048965585 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.061511551513823 /* m */
+	tendon_slack_length 0.193721971379878 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject left_humerus
+	 wrapobject left_antebrachium
+	 wrapobject left_carpus
+endmuscle
+/* brachioradialis */
+/* left_abductor_policis_longum */
+beginmuscle left_abductor_policis_longum
+	beginpoints
+		 -0.025123119012319 0.008505328608865 -0.003837689899705 segment left_carpus
+		 -0.025319023983302 0.0025749007976 0.004224533163349 segment left_carpus
+		 0.003191367965692 -0.00152050845884 -0.098681166903856 segment left_antebrachium
+	endpoints
+	begingroups
+		left_regio_antebrachialis
+	endgroups
+	max_force 77.7971556285417 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.007249454016566 /* m */
+	tendon_slack_length 0.114080193896974 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_antebrachium
+	 wrapobject left_carpus
+endmuscle
+
+beginmuscle right_trapezius_cervical
+	beginpoints
+		 -0.021214978982229 -0.000791122123119 -0.00986241184146 segment right_scapula
+		 0 -0.0102899999999999 0.06891 segment cervix
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 44.3399763507153 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.069551388611038 /* m */
+	tendon_slack_length 0.038588239124009 /* m */
+	pennation_angle 7.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_trapezius_thoracic
+	beginpoints
+		 -0.017020114909089 0.0023400564091 0.009801606074826 segment right_scapula
+		 -0.00632 -0.1179 0.16775 segment thorax
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 58.8333827530661 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.075479746823125 /* m */
+	tendon_slack_length 0.039190444082944 /* m */
+	pennation_angle 10
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_rhomboideus_thoracic
+	beginpoints
+		 0.000440568341977 0.047345507524061 0.037673689888061 segment right_scapula
+		 -0.00608 -0.11277 0.16399 segment thorax
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 58.9097943809668 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.043447249701701 /* m */
+	tendon_slack_length 0.030942195916544 /* m */
+	pennation_angle 11.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_rhomboideus_cervicis
+	beginpoints
+		 0.023244708905464 0.007886254003073 0.047577449010365 segment right_scapula
+		 -0.00274 -0.14652 0.08612 segment cervix
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 101.786628380852 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.054501379309236 /* m */
+	tendon_slack_length 0.196371407127155 /* m */
+	pennation_angle 12.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_latissimus_dorsi
+	beginpoints
+		 -0.00084 0.07482 0.19937 segment thorax
+		 -0.002957879930321 0.024430697682638 -0.151643210326411 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 125.154500626919 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.336797083781484 /* m */
+	tendon_slack_length 0.026126016218516 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_brachiocephalicus_1
+	beginpoints
+		 -0.009325804189517 -0.003763324956533 -0.074325132318459 segment right_humerus
+		 0.000165493704522 -0.021895928862867 -0.028275904123279 segment right_humerus
+		 -0.00006 -0.11578 0.08114 segment cervix
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 18.4663057779484 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.287562981142236 /* m */
+	tendon_slack_length 0.017344760548807 /* m */
+	pennation_angle 1
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_brachiocephalicus_2
+	beginpoints
+		 -0.009325804189517 -0.003763324956533 -0.074325132318459 segment right_humerus
+		 0.000165493704522 -0.021895928862867 -0.028275904123279 segment right_humerus
+		 -0.02375 -0.21087 0.05245 segment cervix
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 18.4663057779484 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.217607406150422 /* m */
+	tendon_slack_length 0.01312529289526 /* m */
+	pennation_angle 1
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_serratus_1
+	beginpoints
+		 -0.02624 -0.01886 -0.02412 segment cervix
+		 0.008056689436312 0.0036944504320671 0.024147840736478 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.086547793352585 /* m */
+	tendon_slack_length 0.048377494601176 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_2
+	beginpoints
+		 -0.01914 -0.0504399999999999 -0.02618 segment cervix
+		 0.009347259210066 -0.00534805727694 0.024799511160033 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.081390364164054 /* m */
+	tendon_slack_length 0.045494653883243 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_3
+	beginpoints
+		 -0.02026 -0.0758399999999999 0.00084 segment cervix
+		 0.009611860986382 -0.011774132747638 0.028024867387958 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.080322187829364 /* m */
+	tendon_slack_length 0.044897576905739 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_4
+	beginpoints
+		 -0.02258 -0.0942099999999999 0.02007 segment cervix
+		 0.010793041521937 -0.023478965677789 0.026425849943924 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.098873730885911 /* m */
+	tendon_slack_length 0.055267306038005 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_5
+	beginpoints
+		 -0.02509 -0.1099899999999999 0.03679 segment cervix
+		 0.01188937593471 -0.0079304812692929 0.042130378527708 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 22.7559462869654 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.097580192381912 /* m */
+	tendon_slack_length 0.05454425869538 /* m */
+	pennation_angle 16.25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_6
+	beginpoints
+		 -0.07414 -0.01866 0.01374 segment thorax
+		 -0.002319830952844 0.057556486290394 0.023678284679128 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.067640308677444 /* m */
+	tendon_slack_length 0.079348009170654 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_7
+	beginpoints
+		 -0.07205 -0.04904 0.00649 segment thorax
+		 0.002217978182579 0.051048139063861 0.027266315940199 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.069661343041051 /* m */
+	tendon_slack_length 0.081718859575587 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_8
+	beginpoints
+		 -0.05734 -0.08359 -0.00597 segment thorax
+		 0.004905823357262 0.045087666778789 0.033193100719972 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.066293874404122 /* m */
+	tendon_slack_length 0.077768523784556 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_9
+	beginpoints
+		 -0.05623 -0.11696 0.00059 segment thorax
+		 0.006854711100137 0.037912424418925 0.037831826437936 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068821726111446 /* m */
+	tendon_slack_length 0.080733915344362 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_10
+	beginpoints
+		 -0.05173 -0.14994 0.0012 segment thorax
+		 0.009038527992819 0.028642073769909 0.043615368888651 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068472331082057 /* m */
+	tendon_slack_length 0.080324044358582 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_11
+	beginpoints
+		 -0.03682 -0.18139 0.00511 segment thorax
+		 0.009809406611287 0.0193982544335 0.041409538337537 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.066211881662085 /* m */
+	tendon_slack_length 0.077672339113399 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_serratus_12
+	beginpoints
+		 -0.03331 -0.2001 0.00603 segment thorax
+		 0.008245978470508 0.012732311307887 0.03285265789349 segment right_scapula
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 34.7992942409812 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.048707907950418 /* m */
+	tendon_slack_length 0.057138644135461 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_pectoralis_profundus
+	beginpoints
+		 0.00619606562082 -0.013073191494511 0.011955052702003 segment right_humerus
+		 0-0.00001 -0.10342 -0.06043 0 thorax
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.114091768341709 /* m */
+	tendon_slack_length 0.028702331658292 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_pectoralis_superficialis
+	beginpoints
+		 -0.000091806556099 -0.01324426411543 -0.026616752618839 segment right_humerus
+		 0-0.00003 -0.1978699999999999 -0.05229 0 thorax
+	endpoints
+	begingroups
+		right_regio_thoracicae
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.052363217687075 /* m */
+	tendon_slack_length 0.017613082312925 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+
+beginmuscle right_supraspinatus
+	beginpoints
+		 -0.005398945646847 -0.011638801461978 -0.00552039640476 segment right_scapula
+		 -0.001460198409926 -0.0055486081870149 0.0263838620438259 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 280.25079319635 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.045256044597594 /* m */
+	tendon_slack_length 0.07564412044452 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_infraspinatus
+	beginpoints
+		 -0.012630733304975 0.019292124236186 -0.006667427140108 segment right_scapula
+		 -0.011528140441366 -0.001612986471523 0.017854086300737 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 362.58599099807 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.030351251137223 /* m */
+	tendon_slack_length 0.097525421415366 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_subscapularis
+	beginpoints
+		 0.000684310623853 0.010912246203563 -0.011064970845892 segment right_scapula
+		 0.020145024421145 0.013047621625111 0.017248416457674 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 481.319576552922 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.020870072838485 /* m */
+	tendon_slack_length 0.086865111706616 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_deltoideus_sca
+	beginpoints
+		 -0.017216204795591 0.003722365091084 0.006325506444386 segment right_scapula
+		 -0.015568583127341 -0.008769809018996 -0.021492937093106 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 91.3261599825511 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.074443078216035 /* m */
+	tendon_slack_length 0.08381445163434 /* m */
+	pennation_angle 10
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_deltoideus_acr
+	beginpoints
+		 -0.034413051227573 -0.007861557130432 -0.08526077269039 segment right_scapula
+		 -0.0135611527119 -0.012104689631896 -0.030618600315582 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 135.512273163552 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.023956674138843 /* m */
+	tendon_slack_length 0.058059864102718 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_teres_major
+	beginpoints
+		 -0.009025440180448 0.052985156634955 0.012314300259601 segment right_scapula
+		 0.007437354022983 -0.006162563658257 -0.02980105827761 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 61.8575475515986 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.133654977272727 /* m */
+	tendon_slack_length 0.034368422727273 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_teres_minor
+	beginpoints
+		 -0.013278974969996 0.018624302688698 -0.055285421434717 segment right_scapula
+		 -0.012991099230856 0.004658413624787 0.008264951384197 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 43.5701845331733 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02790920748554 /* m */
+	tendon_slack_length 0.044686093713645 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+endmuscle
+beginmuscle right_coracobrachialis
+	beginpoints
+		 -0.00070688274717 -0.0164628468251339 -0.092194968421653 segment right_scapula
+		 0.007112724678566 -0.000493963155953 -0.032282513870851 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_deltoidea
+	endgroups
+	max_force 39.7501530047722 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.022761309507983 /* m */
+	tendon_slack_length 0.057791827206578 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle right_biceps_brachii
+	beginpoints
+		 -0.010321649815449 -0.014412797489133 -0.095970595345113 segment right_scapula
+		 0.01170740879166 -0.0052044236323 -0.01324224144868 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 195.591213439937 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.050057182212967 /* m */
+	tendon_slack_length 0.167724561935613 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_brachialis
+	beginpoints
+		 -0.018728651808784 0.0127450937291291 -0.126925149817775 segment right_scapula
+		 0.011724876983316 -0.00669580767398 -0.007053059358988 segment right_antebrachium
+		 0.008999370140984 0.01162188031156 -0.016821258548012 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 61.7708217098157 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.064383033658922 /* m */
+	tendon_slack_length 0.101967243566243 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_triceps_caput_longum /* complex with second head - !!!missing!!! */
+	beginpoints
+		 -0.0094049410087 0.0136342005642941 -0.067358947625018 segment right_scapula
+		 0.004176165089664 0.03169574235888 0.029270380969248 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 549.249122471397 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068777876659972 /* m */
+	tendon_slack_length 0.120038210055986 /* m */
+	pennation_angle 21
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_triceps_caput_laterale /*  similar to triceps caput accessorium */
+	beginpoints
+		 -0.014438915884549 -0.0028299165417259 -0.0101569823105861 segment right_humerus
+		 -0.004918109548328 0.03013042514944 0.015623609471004 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 249.151896181272 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.058893722772642 /* m */
+	tendon_slack_length 0.093146131705249 /* m */
+	pennation_angle 2.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_triceps_caput_accessorium /*  similar to triceps caput laterale */
+	beginpoints
+		 0.009812560935248 0.03552864053148 0.021787396211636 segment right_antebrachium
+		 -0.001969603146341 0.020632314407895 0.004745110581789 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 73.2712356516969 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.064477666284105 /* m */
+	tendon_slack_length 0.042853720962645 /* m */
+	pennation_angle 2.5
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_triceps_caput_medial /*  smallest */
+	beginpoints
+		 0.012218961182508 0.00826258631236 0.038053959824656 segment right_antebrachium
+		 0.008416933695553 -0.004184513227969 -0.028226554463752 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 105.460468434411 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.068151304351246 /* m */
+	tendon_slack_length 0.1118118420379 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_anconeus
+	beginpoints
+		 -0.020185840376724 0.024884812032578 -0.151953813499501 segment right_humerus
+		 -0.009105921182532 0.00016833247858 0.027887859265576 segment right_antebrachium
+		 -0.008913924475624 -0.00223611883606 0.029428227169232 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 57.1837917627338 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.007607531324928 /* m */
+	tendon_slack_length 0.021063489681436 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+beginmuscle right_pronator_teres
+	beginpoints
+		 0.005709554837751 0.009744907008515 -0.138793501804329 segment right_humerus
+		 0.018657495806496 -0.00398442225414 0.005385264180472 segment right_antebrachium
+		 0.01303097114426 -0.01000002213908 -0.06205781234558 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_brachialis
+	endgroups
+	max_force 67.8817729779644 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01143051972885 /* m */
+	tendon_slack_length 0.078732490165643 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+
+/* supinator */
+beginmuscle right_supinator
+	beginpoints
+		 -0.027218615421915 0.003537015098653 -0.1427219476230861 segment right_humerus
+		 -0.013068627374532 -0.00100528382848 0.002371974321776 segment right_antebrachium
+		 0.00228857175836 -0.00774588267316 -0.03598774072438 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 11.9977072936548 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.031336483568477 /* m */
+	tendon_slack_length 0.012685112713324 /* m */
+	pennation_angle 25
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+endmuscle
+/* right_flexor_carpi_radialis */
+beginmuscle right_flexor_carpi_radialis
+	beginpoints
+		 -0.021853656558432 0.0180002207848231 -0.110919649774942 segment right_humerus
+		 0.009290037910072 -0.0153601237377 -0.066319976115696 segment right_antebrachium
+		 0.012729670527814 -0.006231308069449 -0.002991797035868 segment right_carpus
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 57.4630094959502 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.074065960861206 /* m */
+	tendon_slack_length 0.161628393081264 /* m */
+	pennation_angle 15
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+/* right_flexor_carpi_ulnaris */
+beginmuscle right_flexor_carpi_ulnaris
+	beginpoints
+		 -0.027448068675009 0.010594903855068 -0.1444532290939661 segment right_humerus
+		 -0.00394716839362 0.01617591814146 -0.10400142248594 segment right_antebrachium
+		 -0.01184946043485 0.005477000225538 -0.002689955874867 segment right_carpus
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 283.440636679128 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.023937234510014 /* m */
+	tendon_slack_length 0.228689858977996 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+	 wrapobject right_carpus
+endmuscle
+/* pronator teres */
+/* right_extensor_carpi_ulnaris */
+beginmuscle right_extensor_carpi_ulnaris
+	beginpoints
+		 0.0066944663346 0.013483932556269 0.025596024414039 segment right_carpus
+		 0.008179771197088 0.0254506800614 0.005046399643516 segment right_antebrachium
+		 -0.003030539053878 0.036625784256446 -0.142433294030207 segment right_humerus
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 135.35755884618 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.017934075189491 /* m */
+	tendon_slack_length 0.229595746139843 /* m */
+	pennation_angle 35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+	 wrapobject right_carpus
+endmuscle
+/* right_extensor_carpi_radialis */
+beginmuscle right_extensor_carpi_radialis
+	beginpoints
+		 0.005115386436328 0.012286737083387 -0.144207969818642 segment right_humerus
+		 0.022138768100548 -0.00245316619436 -0.016107668972064 segment right_antebrachium
+		 0.020892687130298 0.008803446931975 0.005209974252095 segment right_carpus
+		 0.012093648666282 0.008118754861026 -0.025497425547024 segment right_carpus
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 117.639048965585 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.061511551513823 /* m */
+	tendon_slack_length 0.193721971379878 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes	
+	 wrapobject right_humerus
+	 wrapobject right_antebrachium
+	 wrapobject right_carpus
+endmuscle
+/* brachioradialis */
+/* right_abductor_policis_longum */
+beginmuscle right_abductor_policis_longum
+	beginpoints
+		 0.025576765573279 0.007761307469609 -0.001957231869233 segment right_carpus
+		 0.02500116103307 0.001836451752016 0.006090908141957 segment right_carpus
+		 0.001291850610532 -0.00151809808084 -0.098724343386976 segment right_antebrachium
+	endpoints
+	begingroups
+		right_regio_antebrachialis
+	endgroups
+	max_force 77.7971556285417 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.007249454016566 /* m */
+	tendon_slack_length 0.114080193896974 /* m */
+	pennation_angle 30
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_antebrachium
+	 wrapobject right_carpus
+endmuscle
+
+beginmuscle left_longissimus
+	beginpoints
+		 0.0295900379581338 0.0065855854753276 -0.0120198902158498 segment pelvis
+		 0.02552 -0.08467 0.12568 segment thorax
+	endpoints
+	begingroups
+		left_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_quadratus_lumborum
+	beginpoints
+		 0.0346600342136455 -0.0214477634055733 -0.0270198546538732 segment pelvis
+		 0.00516 -0.00432 0.13748 segment thorax
+	endpoints
+	begingroups
+		left_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle left_iliocostalis
+	beginpoints
+		 0.0368499947347727 -0.0112542629876254 -0.0048601617381159 segment pelvis
+		 0.02771 -0.10938 0.11044 segment thorax
+	endpoints
+	begingroups
+		left_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle right_longissimus
+	beginpoints
+		 -0.0318899604002272 0.0065856736019892 -0.0120200401225338 segment pelvis
+		 -0.02552 -0.08467 0.12568 segment thorax
+	endpoints
+	begingroups
+		right_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_quadratus_lumborum
+	beginpoints
+		 -0.0352099529812896 -0.0174874759283348 -0.0291784075769172 segment pelvis
+		 -0.00309 -0.00416 0.13702 segment thorax
+	endpoints
+	begingroups
+		right_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+beginmuscle right_iliocostalis
+	beginpoints
+		 -0.0392300025254513 -0.01129033545072 -0.0051721017828687 segment pelvis
+		 -0.0277 -0.11235 0.11056 segment thorax
+	endpoints
+	begingroups
+		right_regio_thoarcicae_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle left_sacrocaudalis
+	beginpoints
+		 0.015085 0.069395 0.018305 segment cauda
+		 0.01098 0.01654 0.03546 segment abdomen
+	endpoints
+	begingroups
+		left_regio_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle left_psoas_major
+	beginpoints
+		 -0.010319345501712 0.008374071420756 -0.02653500544596 segment left_femur
+		 0.02734 0.04867 0.00284 segment abdomen
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 37.91612 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06764 /* m */
+	tendon_slack_length 0.10399 /* m */
+	pennation_angle 27.36
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+beginmuscle left_psoas_minor
+	beginpoints
+		 0.027390211878028 -0.0193503966787379 -0.0985713064881869 segment pelvis
+		 0.00912 -0.00102 -0.00319 segment abdomen
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 37.91612 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06668 /* m */
+	tendon_slack_length 0.1025 /* m */
+	pennation_angle 44.33
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+/* left_adductor_longus */
+beginmuscle left_adductor_longus
+	beginpoints
+		 0.001879738903408 0.012542732547024 -0.039588051923696 segment left_femur
+		 0.0139702487289365 -0.0196030830240591 -0.1136862962952997 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 68.88 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.0207 /* m */
+	tendon_slack_length 0.03398 /* m */
+	pennation_angle 28
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_gemelli */
+beginmuscle left_gemelli
+	beginpoints
+		 0.007255201316232 0.012083928235604 -0.008650038125354 segment left_femur
+		 0.04339031380622 0.0221291582259117 -0.1161645762562573 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 51.36 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01046 /* m */
+	tendon_slack_length 0.02672 /* m */
+	pennation_angle 42.92
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_gluteus_medius */
+beginmuscle left_gluteus_medius
+	beginpoints
+		 0.01358926125491 0.005552460408032 0.001694191410404 segment left_femur
+		 0.03803005212457 -0.0045570519818498 -0.0244727522424991 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 513.20416 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03845 /* m */
+	tendon_slack_length 0.06153 /* m */
+	pennation_angle 36.89
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_gluteus_profundus */
+beginmuscle left_gluteus_profundus
+	beginpoints
+		 0.014732265346784 0.002341535313596 -0.005648852128208 segment left_femur
+		 0.0350401635602221 0.00098786530235 -0.0668824794348292 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 126.96 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.00832 /* m */
+	tendon_slack_length 0.05253 /* m */
+	pennation_angle 26.42
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_gluteus_superficialis */
+beginmuscle left_gluteus_superficialis
+	beginpoints
+		 0.0003301204273 0.0233188829007487 -0.0356848430531615 segment pelvis
+		 0.014591084912486 0.01453337166563 -0.01247614712259 segment left_femur
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 127.45652 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.07149 /* m */
+	tendon_slack_length 0.05838 /* m */
+	pennation_angle 42.87
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_iliacus */
+beginmuscle left_iliacus
+	beginpoints
+		 -0.009455294291044 0.008713722512432 -0.024707316911816 segment left_femur
+		 0.0353501009024225 -0.01931290465572 -0.0531228956535741 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 75.83223 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03015 /* m */
+	tendon_slack_length 0.04636 /* m */
+	pennation_angle 15.79
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_obturator_ext */
+beginmuscle left_obturator_ext
+	beginpoints
+		 0.004209904066258 0.01161296981031 -0.014866152637094 segment left_femur
+		 0.0240703418985773 0.0098813540656958 -0.1346745528231217 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 132.96 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01875 /* m */
+	tendon_slack_length 0.02626 /* m */
+	pennation_angle 33.48
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_obturator_int */
+beginmuscle left_obturator_int
+	beginpoints
+		 0.0862002802369146 -0.0006009911630277 -0.116228274867153 segment pelvis
+		 -0.01531570011146 0.0234526622771 -0.00777820683332 segment left_femur
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 188.4 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01601 /* m */
+	tendon_slack_length 0.03523 /* m */
+	pennation_angle 26
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_piriformis */
+beginmuscle left_piriformis
+	beginpoints
+		 0.029240584610658 0.006980351157518 0.005104419877888 segment left_femur
+		 0.03945014979003 0.02140543953079 -0.0492802851330686 segment pelvis
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 104.3504 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.05836 /* m */
+	tendon_slack_length 0.11024 /* m */
+	pennation_angle 31.27
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+
+/* left_pectineus */
+beginmuscle left_pectineus
+	beginpoints
+		 -0.002899265400896 -0.007947706876034 -0.138237773284388 segment left_femur
+		 0.0266502295285883 -0.0190723098360672 -0.1056386037884376 segment pelvis
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 191.76 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03766 /* m */
+	tendon_slack_length 0.12054 /* m */
+	pennation_angle 41.62
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_sartorius_caudal */
+beginmuscle left_sartorius_caudal
+	beginpoints
+		 0.0447399988796789 -0.0314434280539527 -0.0185151979326259 segment pelvis
+		 -0.008774928086808 -0.01813048531547 -0.019362931598906 segment left_crus
+		 -0.003817675379688 -0.02381813742448 -0.046995118799216 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 21.7012 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.22579 /* m */
+	tendon_slack_length 0.06577 /* m */
+	pennation_angle 39.37
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_sartorius_cranial */
+beginmuscle left_sartorius_cranial
+	beginpoints
+		 0.0488499720826 -0.0222869705804575 -0.0021872621416848 segment pelvis
+		 0.003727453896412 -0.02523830303359 0.007270880659434 segment left_crus
+		 0.004132105000126 -0.02586863316858 0.002325107298182 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 66.24 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.18837 /* m */
+	tendon_slack_length 0.07883 /* m */
+	pennation_angle 39.37
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_tensor_fasciae */
+beginmuscle left_tensor_fasciae
+	beginpoints
+		 0.0453700004023955 -0.02863172759067 -0.017493660812835 segment pelvis
+		 0.026102871013004 -0.00869487591184 -0.08767902578233 segment left_femur
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 51.22743 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.13469 /* m */
+	tendon_slack_length 0.02711 /* m */
+	pennation_angle 48.71
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+beginmuscle left_quadratus_femoris
+	beginpoints
+		 0.0428403918880673 0.0270949171804397 -0.1452623678794583 segment pelvis
+		 0.001076417066732 0.015265928130558 -0.027735629255656 segment left_femur
+	endpoints
+	begingroups
+		left_regio_coxae
+	endgroups
+	max_force 64.8 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02843 /* m */
+	tendon_slack_length 0.01669 /* m */
+	pennation_angle 30.22
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/************************************************************/
+/* left_quadriceps_femoris  (Mm. vastus ... & M. rectus femoris) */
+/************************************************************/
+beginmuscle left_vastus_lateralis
+	beginpoints
+		 0.013775224777432 0.001680698334346 -0.021819857462384 segment left_femur
+		 0.012981411705372 -0.02343185447284 -0.003943969457496 segment left_crus
+		 0.007768907296678 -0.02465784259957 -0.029535423915354 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 487.68 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.08996 /* m */
+	tendon_slack_length 0.15346 /* m */
+	pennation_angle 50.54
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+beginmuscle left_vastus_medialis
+	beginpoints
+		 -0.00449653469247 -0.000768908563704 -0.027525099635072 segment left_femur
+		 0.000199345085264 -0.02199610478694 0.005765744724498 segment left_crus
+		 -0.000088689605972 -0.02530997365036 -0.029637025269854 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 513.84 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.04727 /* m */
+	tendon_slack_length 0.16983 /* m */
+	pennation_angle 37.62
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* M. vastus intermedius */
+beginmuscle left_rectus_femoris
+	beginpoints
+		 0.0424701857141457 -0.0103720794122331 -0.0827278763572457 segment pelvis
+		 0.008196549602752 -0.02465870624155 0.005634525931264 segment left_crus
+		 0.002931831066894 -0.02450890553079 -0.027539709584642 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 444.14527 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.04521 /* m */
+	tendon_slack_length 0.2098 /* m */
+	pennation_angle 34.72
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/***********************************/
+/* left_abductor_cruris */
+beginmuscle left_abductor_cruris
+	beginpoints
+		 0.0321302869989965 0.03241492662802 -0.099000312901002 segment pelvis
+		 0.011686606057948 0.062269107183 -0.033270636111164 segment left_crus
+		 0.010674251062448 -0.0262799250702 -0.113522825797464 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 5.64705 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.22742 /* m */
+	tendon_slack_length 0.08206 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_adductoren */
+beginmuscle left_adductoren
+	beginpoints
+		 0.007449845367656 0.001537602769342 -0.094528803214862 segment left_femur
+		 0.0115603390452 0.00170914808993 -0.1381716180960126 segment pelvis
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 342.38755 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.0652 /* m */
+	tendon_slack_length 0.03153 /* m */
+	pennation_angle 28
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+endmuscle
+/* left_biceps_femoris_1 */
+beginmuscle left_biceps_femoris_longum
+	beginpoints
+		 0.0604003748682 0.03354376789299 -0.1346832659533474 segment pelvis
+		 0.02234090774186 0.05541449912355 -0.02541385819983 segment left_crus
+		 0.011436791953302 -0.02538726069319 -0.039426230670686 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 284.22081 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.07889 /* m */
+	tendon_slack_length 0.14069 /* m */
+	pennation_angle 38.55
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_biceps_femoris_2 */
+beginmuscle left_biceps_femoris_breve
+	beginpoints
+		 0.017794940953964 0.037877546519228 -0.070861918122788 segment left_femur
+		 0.02234090774186 0.05541449912355 -0.02541385819983 segment left_crus
+		 0.011436791953302 -0.02538726069319 -0.039426230670686 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 400 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06353 /* m */
+	tendon_slack_length 0.11329 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_gracilis_tractus_calcaneus */
+beginmuscle left_gracilis_tractus_calcaneus
+	beginpoints
+		 0.0101803603415 0.0064375802782858 -0.1441108507601216 segment pelvis
+		 -0.026245862556158 0.03855278698194 -0.027879617567456 segment left_crus
+		 -0.005467139600178 -0.01866337709365 -0.069324665003146 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 217.68827 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.16507 /* m */
+	tendon_slack_length 0.08512 /* m */
+	pennation_angle 50.39
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_semimembranosus */
+beginmuscle left_semimembranosus
+	beginpoints
+		 0.0432104168874584 0.03546711390336 -0.1505973934897746 segment pelvis
+		 -0.015668835537008 0.01061732975825 -0.004643129573056 segment left_crus
+		 -0.007684329737626 -0.0128493681771 -0.016712369935382 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 223.30747 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.16401 /* m */
+	tendon_slack_length 0.0354 /* m */
+	pennation_angle 27.69
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+/* left_semitendinosus */
+beginmuscle left_semitendinosus
+	beginpoints
+		 0.0585003860708164 0.032890100906259 -0.1396411748383667 segment pelvis
+		 -0.0181985792518 0.0392067650158 -0.0483308100227 segment left_crus
+		 -0.005575639079782 -0.0168641363987 -0.070229106746824 segment left_crus
+	endpoints
+	begingroups
+		left_regio_femoris
+	endgroups
+	max_force 83.93746 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.18363 /* m */
+	tendon_slack_length 0.0673 /* m */
+	pennation_angle 34.9
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+
+/* left_gastrocnemius_lateralis */
+beginmuscle left_gastrocnemius_lateralis
+	beginpoints
+		 0.017643146688982 0.001749349860592 -0.160225807954248 segment left_femur
+		 0.021601944476916 0.02183389431723 -0.013310884816088 segment left_crus
+		 0.013404137828718 0.01851769567928 0.039175656505972 segment left_calx
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 604.40215 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02336 /* m */
+	tendon_slack_length 0.22723 /* m */
+	pennation_angle 26.73
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+	 wrapobject left_calx
+endmuscle
+/* left_gastrocnemius_medialis */
+beginmuscle left_gastrocnemius_medialis
+	beginpoints
+		 -0.005165693680528 0.000445013356062 -0.157173728490876 segment left_femur
+		 -0.004947388220168 0.02477252040011 -0.022843990640476 segment left_crus
+		 0.010467216260688 0.019074861555492 0.039645388727276 segment left_calx
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 488.19623 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03493 /* m */
+	tendon_slack_length 0.24724 /* m */
+	pennation_angle 38.02
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+	 wrapobject left_calx
+endmuscle
+/* left_peroneus_longus */
+beginmuscle left_peroneus_longus
+	beginpoints
+		 0.01922724154457 -0.00099180172135 -0.02762921628096 segment left_crus
+		 0.02091146440171 0.007977913239824 -0.001474797552072 segment left_calx
+		 0.018858351715962 0.023089715558996 -0.01216539557847 segment left_calx
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 327.14428 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.13793 /* m */
+	tendon_slack_length 0.1131 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_crus
+	 wrapobject left_calx
+endmuscle
+/* left_tibialis_caudalis */
+beginmuscle left_tibialis_caudalis
+	beginpoints
+		 -0.007351064575258 0.001991383139024 0.011773405855684 segment left_calx
+		 -0.005693826143014 0.01250565838414 -0.208646882473748 segment left_crus
+		 0.015872254387068 0.01251421309483 -0.030452920649774 segment left_crus
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 45 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.10237 /* m */
+	tendon_slack_length 0.08253 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_crus
+	 wrapobject left_calx
+endmuscle
+/* left_tibialis_cranialis */
+beginmuscle left_tibialis_cranialis
+	beginpoints
+		 -0.00661819162392 0.024794134470554 -0.008788555359882 segment left_calx
+		 -0.006502612300272 0.006635825575934 -0.003158623691532 segment left_calx
+		 0.005099351134516 -0.0212287941158 -0.039517135815088 segment left_crus
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 45 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.11974 /* m */
+	tendon_slack_length 0.09653 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_crus
+	 wrapobject left_calx
+endmuscle
+/* left_popliteus */
+beginmuscle left_popliteus
+	beginpoints
+		 0.01925391246393 0.004113410461064 -0.17816184377385 segment left_femur
+		 0.019973078689858 -0.00068471295628 -0.008634818954544 segment left_crus
+		 -0.007345652059528 0.00369628045601 -0.043950016974296 segment left_crus
+	endpoints
+	begingroups
+		left_regio_cruris
+	endgroups
+	max_force 119.20334 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01221 /* m */
+	tendon_slack_length 0.04508 /* m */
+	pennation_angle 43.35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject left_femur
+	 wrapobject left_crus
+endmuscle
+
+beginmuscle right_sacrocaudalis
+	beginpoints
+		 -0.015085 0.069395 0.018305 segment cauda
+		 -0.01098 0.01654 0.03546 segment abdomen
+	endpoints
+	begingroups
+		right_regio_dorsales
+	endgroups
+	max_force 1 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01 /* m */
+	tendon_slack_length 0 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+
+beginmuscle right_psoas_major
+	beginpoints
+		 0.010799800464624 0.00835975614114 -0.026347661470152 segment right_femur
+		 -0.02734 0.04867 0.00284 segment abdomen
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 37.91612 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06764 /* m */
+	tendon_slack_length 0.10399 /* m */
+	pennation_angle 27.36
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+beginmuscle right_psoas_minor
+	beginpoints
+		 -0.0296897865978218 -0.0193503148591243 -0.09857144566635 segment pelvis
+		 -0.00912 -0.00102 -0.00319 segment abdomen
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 37.91612 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06668 /* m */
+	tendon_slack_length 0.1025 /* m */
+	pennation_angle 44.33
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+endmuscle
+/* right_adductor_longus */
+beginmuscle right_adductor_longus
+	beginpoints
+		 -0.001160138167504 0.012544793079696 -0.039615018102032 segment right_femur
+		 -0.0162697504635951 -0.0196030396774383 -0.1136863700294917 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 68.88 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.0207 /* m */
+	tendon_slack_length 0.03398 /* m */
+	pennation_angle 28
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_gemelli */
+beginmuscle right_gemelli
+	beginpoints
+		 -0.00708421881432 0.012093647985116 -0.00877724042711 segment right_femur
+		 -0.0456896838151658 0.0221292859149653 -0.1161647934600213 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 51.36 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01046 /* m */
+	tendon_slack_length 0.02672 /* m */
+	pennation_angle 42.92
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_gluteus_medius */
+beginmuscle right_gluteus_medius
+	beginpoints
+		 -0.01360963885325 0.005570896752992 0.001452915077924 segment right_femur
+		 -0.04032994578306 -0.0045569396590586 -0.0244729433076871 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 513.20416 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03845 /* m */
+	tendon_slack_length 0.06153 /* m */
+	pennation_angle 36.89
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_gluteus_profundus */
+beginmuscle right_gluteus_profundus
+	beginpoints
+		 -0.014626547417024 0.002361435721244 -0.005909288640032 segment right_femur
+		 -0.0373398345070871 0.0009879690532899 -0.0668826559189832 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 126.96 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.00832 /* m */
+	tendon_slack_length 0.05253 /* m */
+	pennation_angle 26.42
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_gluteus_superficialis */
+beginmuscle right_gluteus_superficialis
+	beginpoints
+		 -0.0026298794936619 0.0233188871436719 -0.0356848502705295 segment pelvis
+		 -0.014347744834946 0.014552987394422 -0.012732858043986 segment right_femur
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 127.45652 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.07149 /* m */
+	tendon_slack_length 0.05838 /* m */
+	pennation_angle 42.87
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_iliacus */
+beginmuscle right_iliacus
+	beginpoints
+		 0.009903922844764 0.008700600172784 -0.024535584933992 segment right_femur
+		 -0.0376498971483315 -0.01931280001606 -0.0531230736494741 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 75.83223 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03015 /* m */
+	tendon_slack_length 0.04636 /* m */
+	pennation_angle 15.79
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_obturator_ext */
+beginmuscle right_obturator_ext
+	beginpoints
+		 -0.003929766774934 0.011618487157662 -0.01493835812777 segment right_femur
+		 -0.0263696567545739 0.0098814263674 -0.1346746758109738 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 132.96 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01875 /* m */
+	tendon_slack_length 0.02626 /* m */
+	pennation_angle 33.48
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_obturator_int */
+beginmuscle right_obturator_int
+	beginpoints
+		 -0.088499715098246 -0.0006007407445537 -0.116228700838163 segment pelvis
+		 0.01548305442278 0.02343178582766 -0.0075049968686 segment right_femur
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 188.4 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01601 /* m */
+	tendon_slack_length 0.03523 /* m */
+	pennation_angle 26
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_piriformis */
+beginmuscle right_piriformis
+	beginpoints
+		 -0.02931704738691 0.007020043523726 0.004584966126784 segment right_femur
+		 -0.0417498480417675 0.0214055559244947 -0.0492804831230286 segment pelvis
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 104.3504 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.05836 /* m */
+	tendon_slack_length 0.11024 /* m */
+	pennation_angle 31.27
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+
+/* right_pectineus */
+beginmuscle right_pectineus
+	beginpoints
+		 0.005340401396576 -0.007953292004066 -0.138164680748372 segment right_femur
+		 -0.02894976898678 -0.0190722301379152 -0.1056387393579176 segment pelvis
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 191.76 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03766 /* m */
+	tendon_slack_length 0.12054 /* m */
+	pennation_angle 41.62
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_sartorius_caudal */
+beginmuscle right_sartorius_caudal
+	beginpoints
+		 -0.0470399986696115 -0.0314432964946651 -0.0185154217197999 segment pelvis
+		 0.010392053526552 -0.01800885603595 -0.018663421674086 segment right_crus
+		 0.007534614043032 -0.02374609839344 -0.046580810522576 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 21.7012 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.22579 /* m */
+	tendon_slack_length 0.06577 /* m */
+	pennation_angle 39.37
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_sartorius_cranial */
+beginmuscle right_sartorius_cranial
+	beginpoints
+		 -0.05115002524719 -0.0222868272384575 -0.0021875059716848 segment pelvis
+		 -0.003927346893908 -0.02528687864783 0.006991514339094 segment right_crus
+		 -0.003962397141074 -0.02591999902698 0.002029693826282 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 66.24 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.18837 /* m */
+	tendon_slack_length 0.07883 /* m */
+	pennation_angle 39.37
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_tensor_fasciae */
+beginmuscle right_tensor_fasciae
+	beginpoints
+		 -0.04766999711325 -0.028631594225274 -0.017493887672267 segment pelvis
+		 -0.024555080438444 -0.008660538219352 -0.088128402951574 segment right_femur
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 51.22743 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.13469 /* m */
+	tendon_slack_length 0.02711 /* m */
+	pennation_angle 48.71
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+beginmuscle right_quadratus_femoris
+	beginpoints
+		 -0.04513960576269 0.0270950432927313 -0.1452625824010923 segment pelvis
+		 -0.00056351661626 0.01526703973371 -0.027750176799232 segment right_femur
+	endpoints
+	begingroups
+		right_regio_coxae
+	endgroups
+	max_force 64.8 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02843 /* m */
+	tendon_slack_length 0.01669 /* m */
+	pennation_angle 30.22
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/************************************************************/
+/* right_quadriceps_femoris  (Mm. vastus ... & M. rectus femoris) */
+/************************************************************/
+beginmuscle right_vastus_lateralis
+	beginpoints
+		 -0.013383676948216 0.001699107567034 -0.022060778976728 segment right_femur
+		 -0.012361375245348 -0.02359267399988 -0.004868868920136 segment right_crus
+		 -0.005282228254442 -0.02474066211941 -0.030011732550294 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 487.68 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.08996 /* m */
+	tendon_slack_length 0.15346 /* m */
+	pennation_angle 50.54
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+beginmuscle right_vastus_medialis
+	beginpoints
+		 0.004983081962874 -0.000775334172168 -0.02744100773684 segment right_femur
+		 -0.000340288390816 -0.0219995291775 0.005746050493038 segment right_crus
+		 0.002569504924348 -0.02529310535612 -0.029540012944514 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 513.84 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.04727 /* m */
+	tendon_slack_length 0.16983 /* m */
+	pennation_angle 37.62
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* M. vastus intermedius */
+beginmuscle right_rectus_femoris
+	beginpoints
+		 -0.0447698119563719 -0.0103719543606723 -0.0827280890745376 segment pelvis
+		 -0.008272264630208 -0.02476321356827 0.005033487163744 segment right_crus
+		 -0.000605766165186 -0.02453135431335 -0.027668816213102 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 444.14527 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.04521 /* m */
+	tendon_slack_length 0.2098 /* m */
+	pennation_angle 34.72
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/***********************************/
+/* right_abductor_cruris */
+beginmuscle right_abductor_cruris
+	beginpoints
+		 -0.0344297112237183 0.0324150220364561 -0.09900047519425 segment pelvis
+		 -0.010018651535492 0.06213137058492 -0.034062781865444 segment right_crus
+		 -0.002037115262992 -0.02636058849228 -0.113986734360744 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 5.64705 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.22742 /* m */
+	tendon_slack_length 0.08206 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_adductoren */
+beginmuscle right_adductoren
+	beginpoints
+		 -0.00576962005256 0.001546563375238 -0.09464607060881 segment right_femur
+		 -0.0138596602760253 0.0017091845274664 -0.1381716800775986 segment pelvis
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 342.38755 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.0652 /* m */
+	tendon_slack_length 0.03153 /* m */
+	pennation_angle 28
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+endmuscle
+/* right_biceps_femoris_1 */
+beginmuscle right_biceps_femoris_longum
+	beginpoints
+		 -0.0626996218447762 0.0335439443469923 -0.1346835661080774 segment pelvis
+		 -0.02112956672014 0.05513864543955 -0.02700033795633 segment right_crus
+		 -0.008209863861018 -0.02551193387543 -0.040143246579026 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 284.22081 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.07889 /* m */
+	tendon_slack_length 0.14069 /* m */
+	pennation_angle 38.55
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_biceps_femoris_2 */
+beginmuscle right_biceps_femoris_breve
+	beginpoints
+		 -0.01648367285882 0.037900781736332 -0.07116599726534 segment right_femur
+		 -0.02112956672014 0.05513864543955 -0.02700033795633 segment right_crus
+		 -0.008209863861018 -0.02551193387543 -0.040143246579026 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 400 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.06353 /* m */
+	tendon_slack_length 0.11329 /* m */
+	pennation_angle 0
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_gracilis_tractus_calcaneus */
+beginmuscle right_gracilis_tractus_calcaneus
+	beginpoints
+		 -0.0124796390534242 0.006437612759583 -0.1441109060119996 segment pelvis
+		 0.027717485051842 0.03889522603794 -0.025910194421456 segment right_crus
+		 0.010741851107262 -0.01856051854757 -0.068733108643366 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 217.68827 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.16507 /* m */
+	tendon_slack_length 0.08512 /* m */
+	pennation_angle 50.39
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_semimembranosus */
+beginmuscle right_semimembranosus
+	beginpoints
+		 -0.04550958074354 0.0354672410763825 -0.15059760981575 segment pelvis
+		 0.015829770326032 0.01081721270353 -0.003493569988576 segment right_crus
+		 0.009044308020854 -0.01274321206974 -0.016101848760122 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 223.30747 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.16401 /* m */
+	tendon_slack_length 0.0354 /* m */
+	pennation_angle 27.69
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+/* right_semitendinosus */
+beginmuscle right_semitendinosus
+	beginpoints
+		 -0.060799610743635 0.032890271913265 -0.1396414657275567 segment pelvis
+		 0.021174678077 0.0394566186974 -0.0468938605421 segment right_crus
+		 0.010893175153178 -0.01675962907198 -0.069628067979304 segment right_crus
+	endpoints
+	begingroups
+		right_regio_femoris
+	endgroups
+	max_force 83.93746 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.18363 /* m */
+	tendon_slack_length 0.0673 /* m */
+	pennation_angle 34.9
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+
+/* right_gastrocnemius_lateralis */
+beginmuscle right_gastrocnemius_lateralis
+	beginpoints
+		 -0.01479554152825 0.001771337913184 -0.1605135654625439 segment right_femur
+		 -0.020849222308044 0.02156450892651 -0.014860164357608 segment right_crus
+		 -0.018922652608146 0.019653942096656 0.036234842420084 segment right_calx
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 604.40215 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.02336 /* m */
+	tendon_slack_length 0.22723 /* m */
+	pennation_angle 26.73
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+	 wrapobject right_calx
+endmuscle
+/* right_gastrocnemius_medialis */
+beginmuscle right_gastrocnemius_medialis
+	beginpoints
+		 0.007953775783408 0.000436120530846 -0.157057348142268 segment right_femur
+		 0.006284982652312 0.02484379845547 -0.022434058859716 segment right_crus
+		 -0.016086933026736 0.020008206826908 0.037229720013868 segment right_calx
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 488.19623 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.03493 /* m */
+	tendon_slack_length 0.24724 /* m */
+	pennation_angle 38.02
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+	 wrapobject right_calx
+endmuscle
+/* right_peroneus_longus */
+beginmuscle right_peroneus_longus
+	beginpoints
+		 -0.01714805202823 -0.00122263101095 -0.02895675336456 segment right_crus
+		 -0.01969608023573 0.009405217852784 -0.005168923620552 segment right_calx
+		 -0.014702589587334 0.02426934084206 -0.015218482123302 segment right_calx
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 327.14428 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.13793 /* m */
+	tendon_slack_length 0.1131 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_crus
+	 wrapobject right_calx
+endmuscle
+/* right_tibialis_caudalis */
+beginmuscle right_tibialis_caudalis
+	beginpoints
+		 0.005229311998694 0.001549198572656 0.012917860598468 segment right_calx
+		 0.020728227759866 0.0126733266923 -0.207682594548188 segment right_crus
+		 -0.013767613947252 0.01232612527259 -0.031534644548114 segment right_crus
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 45 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.10237 /* m */
+	tendon_slack_length 0.08253 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_crus
+	 wrapobject right_calx
+endmuscle
+/* right_tibialis_cranialis */
+beginmuscle right_tibialis_cranialis
+	beginpoints
+		 0.00980397716328 0.024216915693254 -0.007294607317482 segment right_calx
+		 0.007411443435792 0.006146763848258 -0.001892842259244 segment right_calx
+		 -0.001935870479564 -0.02127343802236 -0.039773890240048 segment right_crus
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 45 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.11974 /* m */
+	tendon_slack_length 0.09653 /* m */
+	pennation_angle 20
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_crus
+	 wrapobject right_calx
+endmuscle
+/* right_popliteus */
+beginmuscle right_popliteus
+	beginpoints
+		 -0.016084658485422 0.004137364153376 -0.178475325597006 segment right_femur
+		 -0.019280260088702 -0.0009338056622 -0.010067391939264 segment right_crus
+		 0.010482239076152 0.00380941217377 -0.043299377920136 segment right_crus
+	endpoints
+	begingroups
+		right_regio_cruris
+	endgroups
+	max_force 119.20334 /* N (P0 * PCSA) */
+	optimal_fiber_length 0.01221 /* m */
+	tendon_slack_length 0.04508 /* m */
+	pennation_angle 43.35
+	max_thickness 1
+	min_material def_min_muscle
+	max_material def_max_muscle
+	visible yes
+	 wrapobject right_femur
+	 wrapobject right_crus
+endmuscle
+

@@ -1,0 +1,1707 @@
+name Stark (2016) Spezzoo
+
+background_color 1 1 1
+length_units m
+force_units N /* =kg*m/s² */
+gravity -Z
+
+beginsegment ground
+	bone box.obj
+endsegment
+
+beginsegment caput
+	bone new-caput.obj
+	begingroups
+		body
+		axis
+	endgroups
+	mass 1.27236
+	masscenter -0.00119 -0.09091 -0.01684
+	inertia 47538249E-10 -1167701E-10 -1105903E-10
+		-1167701E-10 28236449E-10 -1287715E-9
+		-1105903E-10 -1287715E-9 3319098E-9
+endsegment
+beginsegment cervix
+	bone new-cervix.obj
+	begingroups
+		body
+		axis
+	endgroups
+	mass 0.96876
+	masscenter 0.0092 -0.0898 0.0353
+	inertia 31614821E-10 60819E-10 47024E-10
+		60819E-10 7512777E-10 10895251E-10
+		47024E-10 10895251E-10 27483991E-10
+endsegment
+/* Clavicula - in dog absent - for fast running */
+beginsegment thorax
+	bone new-thorax.obj
+	begingroups
+		body
+		axis
+	endgroups
+	mass 3.76044
+	masscenter 0.0009 -0.0699 0.0996
+	inertia 378038958E-10 -66693E-9 -7913186E-10
+		-66693E-9 220735054E-10 -40944559E-10
+		-7913186E-10 -40944559E-10 323619345E-10
+endsegment
+
+beginsegment abdomen
+	bone new-abdomen.obj
+	begingroups
+		body
+		axis
+	endgroups
+	mass 3.76044
+	masscenter 0.0038 0.1049 -0.0096
+	inertia 141848385E-10 4045839E-10 36729E-10
+		4045839E-10 15188441E-10 17179796E-10
+		36729E-10 17179796E-10 137233252E-10
+endsegment
+beginsegment cauda
+	bone new-cauda.obj
+	begingroups
+		body
+		axis
+	endgroups
+	mass 0.01
+	masscenter 0.0087 0.1049 -0.0080
+	inertia 2079598E-10 -182202E-10 106988E-10
+		-182202E-10 590519E-10 77173E-9
+		106988E-10 77173E-9 1552826E-10
+endsegment
+
+beginsegment left_scapula
+	bone new_stretched-scapula_l.obj
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	mass 0.272
+	masscenter 0.00214 0.00385 0.00481
+	inertia 9240344E-10 -389032E-10 562692E-10
+		-389032E-10 7625721E-10 -120587E-9
+		562692E-10 -120587E-9 2584677E-10
+endsegment
+beginsegment left_humerus
+	bone new_stretched-humerus_l.obj
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	mass 0.360
+	masscenter 0.00361 -0.00295 -0.06176
+	inertia 14256181E-10 13655E-9 -69604E-10
+		13655E-9 13892172E-10 861508E-10
+		-69604E-10 861508E-10 1235678E-10
+endsegment
+beginsegment left_antebrachium
+	bone new_stretched-antebrachium_l.obj
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	mass 0.118
+	masscenter 0.00428 0.00492 -0.07767
+	inertia 4972638E-10 29053E-10 1333E-8
+		29053E-10 4795929E-10 -475647E-10
+		1333E-8 -475647E-10 311098E-10
+endsegment
+beginsegment left_carpus
+	bone new_stretched-carpus_l.obj
+	bone new_stretched-carpus_metacarpus_l.obj
+	begingroups
+		body
+		left
+		forelimb		
+	endgroups
+	mass 0.0205
+	masscenter -0.0008 0.00583 -0.03773
+	inertia 722361E-10 -6997E-10 -32748E-10
+		-6997E-10 838296E-10 21434E-10
+		-32748E-10 21434E-10 216593E-10
+endsegment
+beginsegment left_forepaw
+	bone new_stretched-digiti_manus_l.obj
+	begingroups
+		body
+		left
+		forelimb		
+	endgroups
+	mass 0.0205
+	masscenter 0.00017 0.00442 -0.02165
+	inertia 105177E-10 -3871E-10 -8491E-10
+		-3871E-10 181319E-10 -12155E-10
+		-8491E-10 -12155E-10 95787E-10
+endsegment
+
+beginsegment right_scapula
+	bone new_stretched-scapula_r.obj
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	mass 0.272
+	masscenter -0.00214 0.00385 0.00481
+	inertia 9240344E-10 389032E-10 -562692E-10
+		389032E-10 7625721E-10 -120587E-9
+		-562692E-10 -120587E-9 2584677E-10
+endsegment
+beginsegment right_humerus
+	bone new_stretched-humerus_r.obj
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	mass 0.360
+	masscenter -0.00361 -0.00295 -0.06176
+	inertia 14256181E-10 -13655E-9 69604E-10
+		-13655E-9 13892172E-10 861508E-10
+		69604E-10 861508E-10 1235678E-10
+endsegment
+beginsegment right_antebrachium
+	bone new_stretched-antebrachium_r.obj
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	mass 0.118
+	masscenter -0.00428 0.00492 -0.07767
+	inertia 4972638E-10 -29053E-10 -1333E-8
+		-29053E-10 4795929E-10 -475647E-10
+		-1333E-8 -475647E-10 311098E-10
+endsegment
+beginsegment right_carpus
+	bone new_stretched-carpus_r.obj
+	bone new_stretched-carpus_metacarpus_r.obj
+	begingroups
+		body
+		right
+		forelimb		
+	endgroups
+	mass 0.0205
+	masscenter 0.0008 0.00583 -0.03773
+	inertia 2176E-8 2108E-10 9865E-10
+		2108E-10 252524E-10 6457E-10
+		9865E-10 6457E-10 65245E-10
+endsegment
+beginsegment right_forepaw
+	bone new_stretched-digiti_manus_r.obj
+	begingroups
+		body
+		right
+		forelimb		
+	endgroups
+	mass 0.0205
+	masscenter -0.00017 0.00442 -0.02165
+	inertia 105177E-10 3871E-10 8491E-10
+		3871E-10 181319E-10 -12155E-10
+		8491E-10 -12155E-10 95787E-10
+endsegment
+
+beginsegment pelvis
+	bone new_stretched-pelvis.obj
+	begingroups
+		body
+		left_hindlimb
+		right_hindlimb
+	endgroups
+	mass 0.544
+	masscenter 0 0.00707 -0.07404
+	inertia 21226825E-10 -10789E-10 198747E-10
+		-10789E-10 28859528E-10 2563584E-10
+		198747E-10 2563584E-10 11347684E-10
+endsegment
+
+beginsegment left_femur
+	bone new_stretched-femur_l.obj
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	mass 0.673
+	masscenter 0.00749 -0.00295 -0.09286
+	inertia 31101212E-10 -128676E-10 -3301086E-10
+		-128676E-10 31735545E-10 -763332E-10
+		-3301086E-10 -763332E-10 251391E-9
+endsegment
+beginsegment left_crus
+	bone new_stretched-crus_l.obj
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	mass 0.194
+	masscenter 0.00301 0.00298 -0.10517
+	inertia 8776323E-10 -32954E-10 2802E-8
+		-32954E-10 8800246E-10 95163E-10
+		2802E-8 95163E-10 642979E-10
+endsegment
+beginsegment left_calx
+	bone new_stretched-calx_l.obj
+	bone new_stretched-calx_tarsus_l.obj
+	bone new_stretched-calx_metatarsus_l.obj
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	mass 0.055
+	masscenter 0.00596 0.00871 -0.04856
+	inertia 1287891E-10 5061E-10 -60734E-10
+		5061E-10 1300621E-10 6131E-10
+		-60734E-10 6131E-10 108415E-10
+endsegment
+beginsegment left_hindpaw
+	bone new_stretched-digiti_pedis_l.obj
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	mass 0.034
+	masscenter 0.00315 -0.00707 -0.02637
+	inertia 201162E-10 2481E-9 -18174E-10
+		2481E-9 211489E-10 -60299E-10
+		-18174E-10 -60299E-10 157163E-10
+endsegment
+
+beginsegment right_femur
+	bone new_stretched-femur_r.obj
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	mass 0.673
+	masscenter -0.00749 -0.00295 -0.09286
+	inertia 31101212E-10 128676E-10 3301086E-10
+		128676E-10 31735545E-10 -763332E-10
+		3301086E-10 -763332E-10 251391E-9
+endsegment
+beginsegment right_crus
+	bone new_stretched-crus_r.obj
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	mass 0.194
+	masscenter -0.00301 0.00298 -0.10517
+	inertia 8776323E-10 32954E-10 -2802E-8
+		32954E-10 8800246E-10 95163E-10
+		-2802E-8 95163E-10 642979E-10
+endsegment
+beginsegment right_calx
+	bone new_stretched-calx_r.obj
+	bone new_stretched-calx_tarsus_r.obj
+	bone new_stretched-calx_metatarsus_r.obj
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	mass 0.055
+	masscenter -0.00596 0.00871 -0.04856
+	inertia 1287891E-10 -5061E-10 60734E-10
+		-5061E-10 1300621E-10 6131E-10
+		60734E-10 6131E-10 108415E-10
+endsegment
+beginsegment right_hindpaw
+	bone new_stretched-digiti_pedis_r.obj
+	begingroups
+		body
+		right
+		hindlimb		
+	endgroups
+	mass 0.034
+	masscenter -0.00315 -0.00707 -0.02637
+	inertia 201162E-10 -2481E-9 18174E-10
+		-2481E-9 211489E-10 -60299E-10
+		18174E-10 -60299E-10 157163E-10
+endsegment
+
+beginjoint ground_thorax
+	segments ground thorax
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f180180 (thorax_sagittal)
+	r2 function f180180 (thorax_frontal)
+	r3 function f180180 (thorax_horizontal)
+	tx  function f1010 (thorax_transx)
+	ty  function f1010 (thorax_transy)
+	tz  function f1010 (thorax_transz)
+endjoint
+beginjoint thorax_cervix
+	segments thorax cervix
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (cervix_sagittal)
+	r2 function f9090 (cervix_frontal)
+	r3 function f9090 (cervix_horizontal)
+	tx constant 0
+	ty constant -0.217
+	tz constant 0.08
+endjoint
+beginjoint cervix_caput
+	segments cervix caput
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (caput_sagittal)
+	r2 function f9090 (caput_frontal)
+	r3 function f9090 (caput_horizontal)
+	tx constant 0.00699
+	ty constant -0.1775
+	tz constant 0.0415529
+endjoint
+
+beginjoint thorax_abdomen
+	segments thorax abdomen
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f180180 (abdomen_sagittal)
+	r2 function f180180 (abdomen_frontal)
+	r3 function f180180 (abdomen_horizontal)
+	tx constant 0
+	ty constant 0.048
+	tz constant 0.1609
+endjoint
+beginjoint abdomen_cauda
+	segments abdomen cauda
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f180180 (cauda_sagittal)
+	r2 function f180180 (cauda_frontal)
+	r3 function f180180 (cauda_horizontal)
+	tx constant 0
+	ty constant 0.206
+	tz constant -0.0129
+endjoint
+
+beginjoint thorax_left_scapula
+	segments thorax left_scapula
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_m_superioris_sagittal)
+	r2 function f9090 (left_r_m_superioris_frontal)
+	r3 function f9090 (left_r_m_superioris_horizontal)
+	tx  function f1010 (left_r_m_superioris_transx)
+	ty  function f1010 (left_r_m_superioris_transy)
+	tz  function f1010 (left_r_m_superioris_transz)
+	txconstant0.06561
+	tyconstant-0.183
+	tzconstant0.11
+endjoint
+beginjoint left_scapula_left_humerus
+	segments left_scapula left_humerus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_deltoidea_sagittal)
+	r2 function f9090 (left_r_deltoidea_frontal)
+	r3 function f9090 (left_r_deltoidea_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.117983511136091
+endjoint
+beginjoint left_humerus_left_antebrachium
+	segments left_humerus left_antebrachium
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_cubitalis_sagittal)
+	r2 function f9090 (left_r_cubitalis_frontal)
+	r3 function f9090 (left_r_cubitalis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.146252315537225
+endjoint
+beginjoint left_antebrachium_left_carpus
+	segments left_antebrachium left_carpus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_carpalis_sagittal)
+	r2 function f9090 (left_r_carpalis_frontal)
+	r3 function f9090 (left_r_carpalis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.193092817836397
+endjoint
+beginjoint left_carpus_left_forepaw
+	segments left_carpus left_forepaw
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_forepaw_sagittal)
+	r2 function f9090 (left_r_forepaw_frontal)
+	r3 function f9090 (left_r_forepaw_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.100287910039047
+endjoint
+
+beginjoint thorax_right_scapula
+	segments thorax right_scapula
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_m_superioris_sagittal)
+	r2 function f9090 (right_r_m_superioris_frontal)
+	r3 function f9090 (right_r_m_superioris_horizontal)
+	tx  function f1010 (right_r_m_superioris_transx)
+	ty  function f1010 (right_r_m_superioris_transy)
+	tz  function f1010 (right_r_m_superioris_transz)
+	txconstant-0.06561
+	tyconstant-0.183
+	tzconstant0.11
+endjoint
+beginjoint right_scapula_right_humerus
+	segments right_scapula right_humerus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_deltoidea_sagittal)
+	r2 function f9090 (right_r_deltoidea_frontal)
+	r3 function f9090 (right_r_deltoidea_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.117983511136091
+endjoint
+beginjoint right_humerus_right_antebrachium
+	segments right_humerus right_antebrachium
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_cubitalis_sagittal)
+	r2 function f9090 (right_r_cubitalis_frontal)
+	r3 function f9090 (right_r_cubitalis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.146252315537225
+endjoint
+beginjoint right_antebrachium_right_carpus
+	segments right_antebrachium right_carpus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_carpalis_sagittal)
+	r2 function f9090 (right_r_carpalis_frontal)
+	r3 function f9090 (right_r_carpalis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.193092817836397
+endjoint
+beginjoint right_carpus_right_forepaw
+	segments right_carpus right_forepaw
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_forepaw_sagittal)
+	r2 function f9090 (right_r_forepaw_frontal)
+	r3 function f9090 (right_r_forepaw_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.100287910039047
+endjoint
+beginjoint cauda_pelvis
+	segments cauda pelvis	
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (m_inferioris_sagittal)
+	r2 function f9090 (m_inferioris_frontal)
+	r3 function f9090 (m_inferioris_horizontal)
+	tx  function f1010 (m_inferioris_transx)
+	ty  function f1010 (m_inferioris_transy)
+	tz  function f1010 (m_inferioris_transz)
+endjoint
+
+beginjoint pelvis_left_femur
+	segments pelvis left_femur
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_coxae_sagittal)
+	r2 function f9090 (left_r_coxae_frontal)
+	r3 function f9090 (left_r_coxae_horizontal)
+	tx constant 0.05553
+	ty constant 0
+	tz constant -0.1030
+endjoint
+beginjoint left_femur_left_crus
+	segments left_femur left_crus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_genus_sagittal)
+	r2 function f9090 (left_r_genus_frontal)
+	r3 function f9090 (left_r_genus_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.170477734616577
+endjoint
+beginjoint left_crus_left_calx
+	segments left_crus left_calx
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_talocruralis_sagittal)
+	r2 function f9090 (left_r_talocruralis_frontal)
+	r3 function f9090 (left_r_talocruralis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.218530911772225
+endjoint
+beginjoint left_calx_left_hindpaw
+	segments left_calx left_hindpaw
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (left_r_hindpaw_sagittal)
+	r2 function f9090 (left_r_hindpaw_frontal)
+	r3 function f9090 (left_r_hindpaw_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.13433184320927
+endjoint
+
+beginjoint pelvis_right_femur
+	segments pelvis right_femur
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_coxae_sagittal)
+	r2 function f9090 (right_r_coxae_frontal)
+	r3 function f9090 (right_r_coxae_horizontal)
+	tx constant -0.05553
+	ty constant 0
+	tz constant -0.1030
+endjoint
+beginjoint right_femur_right_crus
+	segments right_femur right_crus
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_genus_sagittal)
+	r2 function f9090 (right_r_genus_frontal)
+	r3 function f9090 (right_r_genus_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.170477734616577
+endjoint
+beginjoint right_crus_right_calx
+	segments right_crus right_calx
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_talocruralis_sagittal)
+	r2 function f9090 (right_r_talocruralis_frontal)
+	r3 function f9090 (right_r_talocruralis_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.218530911772225
+endjoint
+beginjoint right_calx_right_hindpaw
+	segments right_calx right_hindpaw
+	order t r1 r2 r3
+	axis1 1.0 0.0 0.0
+	axis2 0.0 1.0 0.0
+	axis3 0.0 0.0 1.0
+	r1 function f9090 (right_r_hindpaw_sagittal)
+	r2 function f9090 (right_r_hindpaw_frontal)
+	r3 function f9090 (right_r_hindpaw_horizontal)
+	tx constant 0
+	ty constant 0
+	tz constant -0.13433184320927
+endjoint
+
+/* Body */
+
+/* Caput - Head */
+begingencoord caput_sagittal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord caput_frontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord caput_horizontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+/* Cervix */
+begingencoord cervix_sagittal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	default_value -10
+	clamped yes
+	locked yes
+endgencoord
+begingencoord cervix_frontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord cervix_horizontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+
+/* Thorax */
+begingencoord thorax_transx
+	begingroups
+		body
+		axis
+	endgroups
+	range -100.0 100.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord thorax_transy
+	begingroups
+		body
+		axis
+	endgroups
+	range -100.0 100.0
+	default_value -0.10
+	clamped yes
+	locked yes
+endgencoord
+begingencoord thorax_transz
+	begingroups
+		body
+		axis
+	endgroups
+	range -100.0 100.0
+	default_value 0.23
+	clamped yes
+	locked yes
+endgencoord
+begingencoord thorax_sagittal
+	begingroups
+		body
+		axis
+	endgroups
+	range -180.0 180.0
+	default_value 3
+	keys s_key
+	clamped yes
+endgencoord
+begingencoord thorax_frontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -180.0 180.0
+	keys f_key
+	clamped yes
+endgencoord
+begingencoord thorax_horizontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -180.0 180.0
+	keys h_key
+	clamped yes
+endgencoord
+
+/* Abdomen */
+begingencoord abdomen_sagittal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord abdomen_frontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord abdomen_horizontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+/* Cauda */
+begingencoord cauda_sagittal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord cauda_frontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+begingencoord cauda_horizontal
+	begingroups
+		body
+		axis
+	endgroups
+	range -90.0 90.0
+	clamped yes
+	locked yes
+endgencoord
+
+/* Forelimb Left */
+/* Membri superioris */
+begingencoord left_r_m_superioris_transx
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value 0.06561
+	clamped yes
+endgencoord
+begingencoord left_r_m_superioris_transy
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value -0.183
+	clamped yes
+endgencoord
+begingencoord left_r_m_superioris_transz
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value 0.11
+	clamped yes
+endgencoord
+begingencoord left_r_m_superioris_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -10.9
+	clamped yes
+endgencoord
+begingencoord left_r_m_superioris_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -2.8
+	clamped yes
+endgencoord
+begingencoord left_r_m_superioris_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.3
+	clamped yes
+endgencoord
+/* Deltoidea */
+begingencoord left_r_deltoidea_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value 52.9
+	clamped yes
+endgencoord
+begingencoord left_r_deltoidea_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.1
+	clamped yes
+endgencoord
+begingencoord left_r_deltoidea_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 1.4
+	clamped yes
+endgencoord
+/* Cubitalis */
+begingencoord left_r_cubitalis_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -49.6
+	clamped yes
+endgencoord
+begingencoord left_r_cubitalis_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 4.2
+	clamped yes
+endgencoord
+begingencoord left_r_cubitalis_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -1
+	clamped yes
+endgencoord
+/* Carpalis */
+begingencoord left_r_carpalis_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -37.2
+	clamped yes
+endgencoord
+begingencoord left_r_carpalis_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.8
+	clamped yes
+endgencoord
+begingencoord left_r_carpalis_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.8
+	clamped yes
+endgencoord
+
+/* Additional left forepaw */
+begingencoord left_r_forepaw_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	clamped yes
+endgencoord
+begingencoord left_r_forepaw_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord left_r_forepaw_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+
+/* Forelimb Right */
+/* Membri superioris */
+begingencoord right_r_m_superioris_transx
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value -0.06561
+	clamped yes
+endgencoord
+begingencoord right_r_m_superioris_transy
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value -0.183
+	clamped yes
+endgencoord
+begingencoord right_r_m_superioris_transz
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -10.0 10.0
+	default_value 0.11
+	clamped yes
+endgencoord
+begingencoord right_r_m_superioris_sagittal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -10.9
+	clamped yes
+endgencoord
+begingencoord right_r_m_superioris_frontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -2.8
+	clamped yes
+endgencoord
+begingencoord right_r_m_superioris_horizontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.3
+	clamped yes
+endgencoord
+/* Deltoidea */
+begingencoord right_r_deltoidea_sagittal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value 52.9
+	clamped yes
+endgencoord
+begingencoord right_r_deltoidea_frontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.1
+	clamped yes
+endgencoord
+begingencoord right_r_deltoidea_horizontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 1.4
+	clamped yes
+endgencoord
+/* Cubitalis */
+begingencoord right_r_cubitalis_sagittal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -49.6
+	clamped yes
+endgencoord
+begingencoord right_r_cubitalis_frontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 4.2
+	clamped yes
+endgencoord
+begingencoord right_r_cubitalis_horizontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value -1
+	clamped yes
+endgencoord
+/* Carpalis */
+begingencoord right_r_carpalis_sagittal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value -37.2
+	clamped yes
+endgencoord
+begingencoord right_r_carpalis_frontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.8
+	clamped yes
+endgencoord
+begingencoord right_r_carpalis_horizontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.8
+	clamped yes
+endgencoord
+
+/* Additional right forepaw */
+begingencoord right_r_forepaw_sagittal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -180.0 180.0
+	clamped yes
+endgencoord
+begingencoord right_r_forepaw_frontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord right_r_forepaw_horizontal
+	begingroups
+		body
+		right
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+
+begingencoord m_inferioris_transx
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -100.0 100.0
+/*	default_value 0.001151 */
+	clamped yes
+	locked yes
+endgencoord
+begingencoord m_inferioris_transy
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -100.0 100.0
+/*	default_value 0.071515 */
+	clamped yes
+	locked yes
+endgencoord
+begingencoord m_inferioris_transz
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -100.0 100.0
+/*	default_value -0.020297 */
+	clamped yes
+	locked yes
+endgencoord
+begingencoord m_inferioris_sagittal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -180.0 180.0
+	default_value 29.1
+	clamped yes
+endgencoord
+begingencoord m_inferioris_frontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord m_inferioris_horizontal
+	begingroups
+		body
+		left
+		forelimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+
+/* Coxae */
+begingencoord left_r_coxae_sagittal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value -44.8
+	clamped yes
+endgencoord
+begingencoord left_r_coxae_frontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.5
+	clamped yes
+endgencoord
+begingencoord left_r_coxae_horizontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.1
+	clamped yes
+endgencoord
+/* Genus */
+begingencoord left_r_genus_sagittal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value 33.7
+	clamped yes
+endgencoord
+begingencoord left_r_genus_frontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 1.6
+	clamped yes
+endgencoord
+begingencoord left_r_genus_horizontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.4
+	clamped yes
+endgencoord
+/* Talocruralis */
+begingencoord left_r_talocruralis_sagittal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value -60.2
+	clamped yes
+endgencoord
+begingencoord left_r_talocruralis_frontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 3.1
+	clamped yes
+endgencoord
+begingencoord left_r_talocruralis_horizontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 2.3
+	clamped yes
+endgencoord
+
+/* Additional left hindpaw */
+begingencoord left_r_hindpaw_sagittal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	clamped yes
+endgencoord
+begingencoord left_r_hindpaw_frontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord left_r_hindpaw_horizontal
+	begingroups
+		body
+		left
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+
+/* Coxae */
+begingencoord right_r_coxae_sagittal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value -44.8
+	clamped yes
+endgencoord
+begingencoord right_r_coxae_frontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.5
+	clamped yes
+endgencoord
+begingencoord right_r_coxae_horizontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 0.1
+	clamped yes
+endgencoord
+/* Genus */
+begingencoord right_r_genus_sagittal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value 33.7
+	clamped yes
+endgencoord
+begingencoord right_r_genus_frontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 1.6
+	clamped yes
+endgencoord
+begingencoord right_r_genus_horizontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value -0.4
+	clamped yes
+endgencoord
+/* Talocruralis */
+begingencoord right_r_talocruralis_sagittal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	default_value -60.2
+	clamped yes
+endgencoord
+begingencoord right_r_talocruralis_frontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 3.1
+	clamped yes
+endgencoord
+begingencoord right_r_talocruralis_horizontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	default_value 2.3
+	clamped yes
+endgencoord
+
+/* Additional right hindpaw */
+begingencoord right_r_hindpaw_sagittal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -180.0 180.0
+	clamped yes
+endgencoord
+begingencoord right_r_hindpaw_frontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+begingencoord right_r_hindpaw_horizontal
+	begingroups
+		body
+		right
+		hindlimb
+	endgroups
+	range -90.0 90.0
+	clamped yes
+endgencoord
+
+beginfunction f1010 /* direct mapping  */
+(-10.0, -10.0)
+( 10.0, 10.0)
+endfunction
+beginfunction f9090 /* direct mapping  */
+(-90.0, -90.0)
+( 90.0, 90.0)
+endfunction
+beginfunction f180180 /* direct mapping  */
+(-180.0, -180.0)
+( 180.0, 180.0)
+endfunction
+beginfunction f090 /* direct mapping  */
+( 0.0, 0.0)
+( 90.0, 90.0)
+endfunction
+beginfunction f0180 /* direct mapping  */
+( 0.0, 0.0)
+( 180.0, 180.0)
+endfunction
+beginfunction f900 /* direct mapping  */
+(-90.0, -90.0)
+( 0.0, 0.0)
+endfunction
+beginfunction f1800 /* direct mapping  */
+(-180.0, -180.0)
+( 0.0, 0.0)
+endfunction
+
+/* Caput */
+
+/* Cervix */
+
+/* Clavicula - in dog absent - for fast running */
+
+/* Thorax */
+
+/* Abdomen */
+
+/* Cauda */
+
+/* Scapula */
+
+/* Humerus */
+beginwrapobject left_humerus
+	wraptype cylinder
+	segment left_humerus
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.03
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/*  Antebrachium */
+beginwrapobject left_antebrachium
+	wraptype cylinder
+	segment left_antebrachium
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.013
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Carpus */
+beginwrapobject left_carpus
+	wraptype cylinder
+	segment left_carpus
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.01
+	height	0.1 
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Forepaw */
+
+/* Scapula */
+
+/* Humerus */
+beginwrapobject right_humerus
+	wraptype cylinder
+	segment right_humerus
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.03
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/*  Antebrachium */
+beginwrapobject right_antebrachium
+	wraptype cylinder
+	segment right_antebrachium
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.013
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Carpus */
+beginwrapobject right_carpus
+	wraptype cylinder
+	segment right_carpus
+	xyz_body_rotation 0.0 90.0 0.0
+	translation 0.0 0.0 0.0
+	radius	0.01
+	height	0.1 
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Forepaw */
+
+/* Pelvis */
+
+/* Femur */
+beginwrapobject left_femur
+	wraptype cylinder
+	segment left_femur
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.016
+	height	0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/*  Crus */
+beginwrapobject left_crus
+	wraptype cylinder
+	segment left_crus
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.02
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Calx */
+beginwrapobject left_calx
+	wraptype cylinder
+	segment left_calx
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.01
+	height	0.1 
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Hindpaw */
+
+/* Femur */
+beginwrapobject right_femur
+	wraptype cylinder
+	segment right_femur
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.016
+	height	0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/*  Crus */
+beginwrapobject right_crus
+	wraptype cylinder
+	segment right_crus
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.02
+	height      0.1
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Calx */
+beginwrapobject right_calx
+	wraptype cylinder
+	segment right_calx
+	xyz_body_rotation 0.0 90.0 0.0
+	radius	0.01
+	height	0.1 
+	active yes
+	wraps_dummy
+endwrapobject
+
+/* Hindpaw */
+
+
+begincamera default
+	1.0 0.0 0.0 0.0
+	0.0 0.0 1.0 0.0 
+	0.0 -1.0 0.0 0.0
+	0.0 0.0 0.0 1.0
+endcamera

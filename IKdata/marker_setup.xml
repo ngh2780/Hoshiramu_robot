@@ -1,0 +1,758 @@
+<OpenSimDocument Version="20302">
+<MarkerSet name="gait2354_Scale">
+<objects>
+
+<Marker name="Hips">
+<!-- Body segment in the model on which the marker resides. -->
+<body> pelvis </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Spine">
+<!-- Body segment in the model on which the marker resides. -->
+<body> pelvis </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Spine1">
+<!-- Body segment in the model on which the marker resides. -->
+<body> abdomen </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Neck">
+<!-- Body segment in the model on which the marker resides. -->
+<body> cervix </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Head">
+<!-- Body segment in the model on which the marker resides. -->
+<body> caput </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Head_End">
+<!-- Body segment in the model on which the marker resides. -->
+<body> caput </body>
+<!-- Location of a marker on the body segment. -->
+<location> -0.00119 -0.18 -0.001684 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftShoulder">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_scapula </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftArm">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_humerus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftForeArm">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_antebrachium </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftHand">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_carpus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftHand_End">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_forepaw </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightShoulder">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_scapula </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightArm">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_humerus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightForeArm">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_antebrachium </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightHand">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_carpus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightHand_End">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_forepaw </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftUpLeg">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_femur </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftLeg">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_crus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftFoot">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_calx </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="LeftFoot_End">
+<!-- Body segment in the model on which the marker resides. -->
+<body> left_hindpaw </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightUpLeg">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_femur </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightLeg">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_crus </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightFoot">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_calx </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="RightFoot_End">
+<!-- Body segment in the model on which the marker resides. -->
+<body> right_hindpaw </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+<Marker name="Tail">
+<!-- Body segment in the model on which the marker resides. -->
+<body> cauda </body>
+<!-- Location of a marker on the body segment. -->
+<location> 0 0 0 </location>
+<!-- Flag (true or false) specifying whether or not a marker should be kept
+			    fixed in the marker placement step.  i.e. If false, the marker is
+			    allowed to move. -->
+<fixed> false </fixed>
+<!-- Used for displaying a marker in the visuals. -->
+<VisibleObject name="">
+<!-- Set of geometry files and associated attributes, allow .vtp, .stl,
+					    .obj -->
+<GeometrySet name="">
+<objects/>
+<groups/>
+</GeometrySet>
+<!-- Three scale factors for display purposes: scaleX scaleY scaleZ -->
+<scale_factors> 1.00000000 1.00000000 1.00000000 </scale_factors>
+<!-- transform relative to owner specified as 3 rotations (rad) followed by
+					    3 translations rX rY rZ tx ty tz -->
+<transform> -0.00000000 0.00000000 -0.00000000 0.00000000 0.00000000 0.00000000 </transform>
+<!-- Whether to show a coordinate frame -->
+<show_axes> false </show_axes>
+<!-- Display Pref. 0:Hide 1:Wire 3:Flat 4:Shaded Can be overriden for
+					    individual geometries -->
+<display_preference> 4 </display_preference>
+</VisibleObject>
+</Marker>
+
+</objects>
+<groups/>
+</MarkerSet>
+</OpenSimDocument>
