@@ -33,7 +33,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\pelvis.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\pelvis.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -137,7 +137,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\femur_l.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\femur_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -217,7 +217,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\tibia_l.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\tibia_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -305,7 +305,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -361,7 +361,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -441,7 +441,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -529,7 +529,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0010000000474974513 0.0010000000474974513 0.0010000000474974513</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\hoshiramu_robot\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -638,24 +638,16 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</FreeJoint>
-				<BallJoint name="pelvis_to_femur_l">
+				<PinJoint name="pelvis_to_femur_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>pelvis_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
 					<socket_child_frame>femur_l_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="rx">
+						<Coordinate name="pelvis_to_femur_l">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0</default_value>
-						</Coordinate>
-						<Coordinate name="ry">
-							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0</default_value>
-						</Coordinate>
-						<Coordinate name="rz">
-							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0</default_value>
+							<default_value>-0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -673,7 +665,7 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>0.049188625067472458 -0.055946111679077148 -0.030299454927444458</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 						<PhysicalOffsetFrame name="femur_l_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
@@ -688,10 +680,10 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>-0.02670808881521225 0.084960252046585083 -0.027269601821899414</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</BallJoint>
+				</PinJoint>
 				<PinJoint name="femur_l_to_tibia_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>femur_l_body_offset</socket_parent_frame>
@@ -784,22 +776,14 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</PinJoint>
-				<BallJoint name="pelvis_to_femur_r">
+				<PinJoint name="pelvis_to_femur_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>pelvis_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
 					<socket_child_frame>femur_r_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="rx">
-							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0</default_value>
-						</Coordinate>
-						<Coordinate name="ry">
-							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
-							<default_value>0</default_value>
-						</Coordinate>
-						<Coordinate name="rz">
+						<Coordinate name="pelvis_to_femur_r">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 						</Coordinate>
@@ -819,7 +803,7 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>-0.060987662523984909 -0.055945932865142822 -0.030299574136734009</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 -1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 						<PhysicalOffsetFrame name="femur_r_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
@@ -834,10 +818,10 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>0.023067638278007507 0.084959745407104492 -0.027269832789897919</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 -1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</BallJoint>
+				</PinJoint>
 				<PinJoint name="femur_r_to_tibia_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>femur_r_body_offset</socket_parent_frame>
@@ -975,9 +959,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1041,9 +1025,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1107,9 +1091,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="iliopsoas_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1173,9 +1157,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="iliopsoas_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1239,9 +1223,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gastrocnemius_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1305,9 +1289,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gastrocnemius_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1371,9 +1355,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="semitendinosus_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1437,9 +1421,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="semitendinosus_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1503,9 +1487,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1569,9 +1553,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1635,9 +1619,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gluteus_medius_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1701,9 +1685,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999999</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gluteus_medius_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1781,9 +1765,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000024</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999996</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000005</tendon_slack_length>
+					<tendon_slack_length>0.038999999999999993</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="rectus_femoris_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1861,9 +1845,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000017</optimal_fiber_length>
+					<optimal_fiber_length>0.026750000000000006</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000003</tendon_slack_length>
+					<tendon_slack_length>0.039000000000000007</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="rectus_femoris_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1941,9 +1925,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000017</optimal_fiber_length>
+					<optimal_fiber_length>0.026750000000000031</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000003</tendon_slack_length>
+					<tendon_slack_length>0.039000000000000042</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_medius_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2021,9 +2005,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.049999999999999996</optimal_fiber_length>
+					<optimal_fiber_length>0.026750000000000006</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.099999999999999992</tendon_slack_length>
+					<tendon_slack_length>0.039000000000000007</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_medius_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2101,9 +2085,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000017</optimal_fiber_length>
+					<optimal_fiber_length>0.026750000000000006</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000003</tendon_slack_length>
+					<tendon_slack_length>0.039000000000000007</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_lateralis_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2181,9 +2165,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.049999999999999996</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999996</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.099999999999999992</tendon_slack_length>
+					<tendon_slack_length>0.038999999999999993</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_lateralis_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2261,9 +2245,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.050000000000000003</optimal_fiber_length>
+					<optimal_fiber_length>0.026750000000000006</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.10000000000000001</tendon_slack_length>
+					<tendon_slack_length>0.039000000000000007</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_intermedius_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2341,9 +2325,9 @@
 						</PathWrapSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.049999999999999989</optimal_fiber_length>
+					<optimal_fiber_length>0.026749999999999993</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.099999999999999978</tendon_slack_length>
+					<tendon_slack_length>0.038999999999999993</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_intermedius_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2449,6 +2433,12 @@
 					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 -0.07284100353717804 0.095259502530097961</location>
+				</Marker>
+				<Marker name="Tail">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/pelvis_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 0.035693645477294922 -0.075339086353778839</location>
 				</Marker>
 			</objects>
 			<groups />
