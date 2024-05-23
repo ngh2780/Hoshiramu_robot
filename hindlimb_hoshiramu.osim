@@ -33,7 +33,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\pelvis.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\pelvis.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -135,7 +135,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\femur_l.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -213,7 +213,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\tibia_l.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -272,6 +272,18 @@
 								<!--The length of the cylinder.-->
 								<length>0.10000000000000001</length>
 							</WrapCylinder>
+							<WrapSphere name="tibia_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.014601022005081177 0.084827899932861328 0.040665373206138611</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.039999999105930328</radius>
+							</WrapSphere>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -299,7 +311,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -353,7 +365,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -431,7 +443,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -490,6 +502,18 @@
 								<!--The length of the cylinder.-->
 								<length>0.10000000000000001</length>
 							</WrapCylinder>
+							<WrapSphere name="tibia_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0047003179788589478 0.084848225116729736 0.050667703151702881</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.039999999105930328</radius>
+							</WrapSphere>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -517,7 +541,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>C:\Users\Shih Ying\Desktop\model\hoshiramu_hindlimb\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
+									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -943,6 +967,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="biceps_femoris_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>tibia_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_l_ActiveForceLengthCurve">
@@ -1000,11 +1038,25 @@
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>0.001577913761138916 0.045690417289733887 0.067428141832351685</location>
+									<location>0.0001233220100402832 0.040130376815795898 0.06674213707447052</location>
 								</PathPoint>
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="biceps_femoris_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>tibia_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_r_ActiveForceLengthCurve">
