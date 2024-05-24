@@ -33,7 +33,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\pelvis.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\pelvis.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -135,7 +135,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_l.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\femur_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -189,6 +189,24 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapEllipsoid name="femur_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>1.1499999761581421 3.1400001049041748 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.010372638702392578 -0.069426059722900391 0.04213559627532959</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The length of the radii of the ellipsoid.-->
+								<dimensions>0.029999999329447746 0.019999999552965164 0.05000000074505806</dimensions>
+							</WrapEllipsoid>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.073200002312660217</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -213,7 +231,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_l.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\tibia_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -278,7 +296,7 @@
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
 								<xyz_body_rotation>0 0 0</xyz_body_rotation>
 								<!--Translation of the WrapObject.-->
-								<translation>0.014601022005081177 0.084827899932861328 0.040665373206138611</translation>
+								<translation>0.012817397713661194 0.084827899932861328 0.040665373206138611</translation>
 								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
 								<quadrant>x</quadrant>
 								<!--The radius of the sphere.-->
@@ -311,7 +329,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -365,7 +383,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -419,6 +437,24 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapEllipsoid name="femur_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>1.1499999761581421 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.020019128918647766 -0.069426059722900391 0.04213559627532959</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The length of the radii of the ellipsoid.-->
+								<dimensions>0.029999999329447746 0.019999999552965164 0.05000000074505806</dimensions>
+							</WrapEllipsoid>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.058899998664855957</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -443,7 +479,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -506,9 +542,9 @@
 								<!--Whether or not the WrapObject is considered active in computing paths-->
 								<active>true</active>
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
-								<xyz_body_rotation>0 0 0</xyz_body_rotation>
+								<xyz_body_rotation>180 180 180</xyz_body_rotation>
 								<!--Translation of the WrapObject.-->
-								<translation>-0.0047003179788589478 0.084848225116729736 0.050667703151702881</translation>
+								<translation>-0.014234244823455811 0.08077472448348999 0.046750307083129883</translation>
 								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
 								<quadrant>x</quadrant>
 								<!--The radius of the sphere.-->
@@ -541,7 +577,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
+									<mesh_file>C:\TEST\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -1032,13 +1068,13 @@
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/pelvis_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.10902843903750181 -0.11992686986923218 -0.15261758863925934</location>
+									<location>-0.10959003400057554 -0.12033945322036743 -0.15237623453140259</location>
 								</PathPoint>
 								<PathPoint name="biceps_femoris_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>0.0001233220100402832 0.040130376815795898 0.06674213707447052</location>
+									<location>0.0015780000248923898 0.045690000057220459 0.067428000271320343</location>
 								</PathPoint>
 							</objects>
 							<groups />
@@ -1718,6 +1754,8 @@
 					<GeometryPath name="path">
 						<!--Default appearance attributes for this AbstractGeometryPath.-->
 						<Appearance>
+							<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+							<visible>false</visible>
 							<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 							<color>0.80000000000000004 0.10000000000000001 0.10000000000000001</color>
 						</Appearance>
@@ -1894,9 +1932,17 @@
 						<!--The wrap objects that are associated with this path-->
 						<PathWrapSet>
 							<objects>
-								<PathWrap name="vastus_medius_r_wrapping">
+								<PathWrap name="vastus_medius_r_wrapping_knee">
 									<!--A WrapObject that this PathWrap interacts with.-->
 									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_medius_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -1978,6 +2024,14 @@
 									<!--The range of indices to use to compute the path over the wrap object.-->
 									<range>-1 -1</range>
 								</PathWrap>
+								<PathWrap name="vastus_medius_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
 							</objects>
 							<groups />
 						</PathWrapSet>
@@ -2049,6 +2103,14 @@
 								<PathWrap name="vastus_lateralis_r_wrapping">
 									<!--A WrapObject that this PathWrap interacts with.-->
 									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_lateralis_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -2130,6 +2192,14 @@
 									<!--The range of indices to use to compute the path over the wrap object.-->
 									<range>-1 -1</range>
 								</PathWrap>
+								<PathWrap name="vastus_lateralis_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
 							</objects>
 							<groups />
 						</PathWrapSet>
@@ -2206,6 +2276,14 @@
 									<!--The range of indices to use to compute the path over the wrap object.-->
 									<range>-1 -1</range>
 								</PathWrap>
+								<PathWrap name="vastus_intermedius_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
 							</objects>
 							<groups />
 						</PathWrapSet>
@@ -2277,6 +2355,14 @@
 								<PathWrap name="vastus_intermedius_l_wrapping">
 									<!--A WrapObject that this PathWrap interacts with.-->
 									<wrap_object>knee_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_intermedius_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
 									<!--The wrapping method used to solve the path around the wrap object.-->
 									<method>hybrid</method>
 									<!--The range of indices to use to compute the path over the wrap object.-->
@@ -2389,12 +2475,6 @@
 					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 -0.14568200707435608 0.19051900506019592</location>
-				</Marker>
-				<Marker name="Tail">
-					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
-					<socket_parent_frame>/bodyset/pelvis_body</socket_parent_frame>
-					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0 0.071387290954589844 -0.15067817270755768</location>
 				</Marker>
 			</objects>
 			<groups />
