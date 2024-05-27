@@ -189,6 +189,36 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapEllipsoid name="femur_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>1.1499999761581421 3.1400001049041748 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.010372638702392578 -0.069426059722900391 0.04213559627532959</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The length of the radii of the ellipsoid.-->
+								<dimensions>0.029999999329447746 0.019999999552965164 0.05000000074505806</dimensions>
+							</WrapEllipsoid>
+							<WrapSphere name="pelvis_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 180 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0097295679152011871 0.19339066743850708 -0.068654358386993408</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.02500000037252903</radius>
+							</WrapSphere>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.073200002312660217</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -255,6 +285,38 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapCylinder name="knee_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0057539354279601274 0.15547816298415529 0.097775590180091687</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.059999998658895493</radius>
+								<!--The length of the cylinder.-->
+								<length>0.10000000000000001</length>
+							</WrapCylinder>
+							<WrapSphere name="tibia_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.012817397713661194 0.084827899932861328 0.040665373206138611</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.039999999105930328</radius>
+							</WrapSphere>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.058899998664855957</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -387,6 +449,36 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapEllipsoid name="femur_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>1.1499999761581421 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.020019128918647766 -0.069426059722900391 0.04213559627532959</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The length of the radii of the ellipsoid.-->
+								<dimensions>0.029999999329447746 0.019999999552965164 0.05000000074505806</dimensions>
+							</WrapEllipsoid>
+							<WrapSphere name="pelvis_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 0 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.01246444508433342 0.19370073080062866 -0.070516869425773621</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.02500000037252903</radius>
+							</WrapSphere>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.058899998664855957</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -453,6 +545,38 @@
 						<!--Scale factors in X, Y, Z directions respectively.-->
 						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 					</FrameGeometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects>
+							<WrapCylinder name="knee_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 0</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0037849794912338253 0.15846229240894316 0.098062665748596178</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.059999998658895493</radius>
+								<!--The length of the cylinder.-->
+								<length>0.10000000000000001</length>
+							</WrapCylinder>
+							<WrapSphere name="tibia_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>180 180 180</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.014234244823455811 0.08077472448348999 0.046750307083129883</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the sphere.-->
+								<radius>0.039999999105930328</radius>
+							</WrapSphere>
+						</objects>
+						<groups />
+					</WrapObjectSet>
 					<!--The mass of the body (kg)-->
 					<mass>0.047800000756978989</mass>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
@@ -526,22 +650,28 @@
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="ground_to_pelvis_rx">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 						<Coordinate name="ground_to_pelvis_ry">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 						<Coordinate name="ground_to_pelvis_rz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 						<Coordinate name="ground_to_pelvis_tx">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 						<Coordinate name="ground_to_pelvis_ty">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 						<Coordinate name="ground_to_pelvis_tz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -578,21 +708,16 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</FreeJoint>
-				<BallJoint name="pelvis_to_femur_l">
+				<PinJoint name="pelvis_to_femur_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>pelvis_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
 					<socket_child_frame>femur_l_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="rx">
-							<!--All properties of this object have their default values.-->
-						</Coordinate>
-						<Coordinate name="ry">
-							<!--All properties of this object have their default values.-->
-						</Coordinate>
-						<Coordinate name="rz">
-							<!--All properties of this object have their default values.-->
+						<Coordinate name="pelvis_to_femur_l">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>-0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -610,7 +735,7 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>0.098377250134944916 -0.1118922233581543 -0.060598909854888916</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 						<PhysicalOffsetFrame name="femur_l_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
@@ -625,10 +750,10 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>-0.0534161776304245 0.16992050409317017 -0.054539203643798828</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</BallJoint>
+				</PinJoint>
 				<PinJoint name="femur_l_to_tibia_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>femur_l_body_offset</socket_parent_frame>
@@ -637,7 +762,8 @@
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="femur_l_to_tibia_l_rz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -682,7 +808,8 @@
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="tibia_l_to_metatarsal_l_rz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -719,21 +846,16 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</PinJoint>
-				<BallJoint name="pelvis_to_femur_r">
+				<PinJoint name="pelvis_to_femur_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>pelvis_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
 					<socket_child_frame>femur_r_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="rx">
-							<!--All properties of this object have their default values.-->
-						</Coordinate>
-						<Coordinate name="ry">
-							<!--All properties of this object have their default values.-->
-						</Coordinate>
-						<Coordinate name="rz">
-							<!--All properties of this object have their default values.-->
+						<Coordinate name="pelvis_to_femur_r">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -751,7 +873,7 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>-0.12197532504796982 -0.11189186573028564 -0.060599148273468018</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 -1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 						<PhysicalOffsetFrame name="femur_r_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
@@ -766,10 +888,10 @@
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>0.046135276556015015 0.16991949081420898 -0.054539665579795837</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
-							<orientation>-0 0 -0</orientation>
+							<orientation>0 -1.5707962512969971 0</orientation>
 						</PhysicalOffsetFrame>
 					</frames>
-				</BallJoint>
+				</PinJoint>
 				<PinJoint name="femur_r_to_tibia_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>femur_r_body_offset</socket_parent_frame>
@@ -778,7 +900,8 @@
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="femur_r_to_tibia_r_rz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -823,7 +946,8 @@
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
 						<Coordinate name="tibia_r_to_metatarsal_r_rz">
-							<!--All properties of this object have their default values.-->
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
 						</Coordinate>
 					</coordinates>
 					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
@@ -903,6 +1027,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="biceps_femoris_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>tibia_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_l_ActiveForceLengthCurve">
@@ -954,17 +1092,31 @@
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/pelvis_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.10902843903750181 -0.11992686986923218 -0.15261758863925934</location>
+									<location>-0.10959003400057554 -0.12033945322036743 -0.15237623453140259</location>
 								</PathPoint>
 								<PathPoint name="biceps_femoris_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>0.001577913761138916 0.045690417289733887 0.067428141832351685</location>
+									<location>0.0015780000248923898 0.045690000057220459 0.067428000271320343</location>
 								</PathPoint>
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="biceps_femoris_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>tibia_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="biceps_femoris_r_ActiveForceLengthCurve">
@@ -1142,7 +1294,7 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.022236406803131104 -0.1257748007774353 0.03655204176902771</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_l-P2">
+								<PathPoint name="gastrocnemius_l-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
@@ -1204,7 +1356,7 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.021943509578704834 -0.12596988677978516 0.036598518490791321</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_r-P2">
+								<PathPoint name="gastrocnemius_r-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
@@ -1390,6 +1542,12 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0094274580478668213 0.095895767211914062 0.086186125874519348</location>
 								</PathPoint>
+								<PathPoint name="pathpoint">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>0.0080000003799796104 0.18000000715255737 -0.0030000000260770321</location>
+								</PathPoint>
 								<PathPoint name="cranial_tibial_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
@@ -1451,6 +1609,12 @@
 									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0084850490093231201 0.094351232051849365 0.085551142692565918</location>
+								</PathPoint>
+								<PathPoint name="pathpoint">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>-0.0070000002160668373 -0.15000000596046448 -0.079999998211860657</location>
 								</PathPoint>
 								<PathPoint name="cranial_tibial_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
@@ -1523,6 +1687,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="gluteus_medius_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>pelvis_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gluteus_medius_r_ActiveForceLengthCurve">
@@ -1585,6 +1763,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="gluteus_medius_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>pelvis_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gluteus_medius_l_ActiveForceLengthCurve">
@@ -1626,6 +1818,8 @@
 					<GeometryPath name="path">
 						<!--Default appearance attributes for this AbstractGeometryPath.-->
 						<Appearance>
+							<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+							<visible>false</visible>
 							<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 							<color>0.80000000000000004 0.10000000000000001 0.10000000000000001</color>
 						</Appearance>
@@ -1647,6 +1841,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="rectus_femoris_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="rectus_femoris_r_ActiveForceLengthCurve">
@@ -1709,6 +1917,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="rectus_femoris_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="rectus_femoris_l_ActiveForceLengthCurve">
@@ -1771,6 +1993,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_medius_r_wrapping_knee">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_medius_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_medius_r_ActiveForceLengthCurve">
@@ -1833,6 +2077,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_medius_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_medius_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_medius_l_ActiveForceLengthCurve">
@@ -1895,6 +2161,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_lateralis_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_lateralis_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_lateralis_r_ActiveForceLengthCurve">
@@ -1957,6 +2245,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_lateralis_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_lateralis_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_lateralis_l_ActiveForceLengthCurve">
@@ -2019,6 +2329,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_intermedius_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_intermedius_r_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_intermedius_r_ActiveForceLengthCurve">
@@ -2081,6 +2413,28 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="vastus_intermedius_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>knee_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+								<PathWrap name="vastus_intermedius_l_wrapping_femur">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>femur_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="vastus_intermedius_l_ActiveForceLengthCurve">
@@ -2116,6 +2470,7 @@
 					<HuntCrossleyForce::ContactParametersSet name="contact_parameters">
 						<objects>
 							<HuntCrossleyForce::ContactParameters>
+								<!--Names of geometry objects affected by these parameters.-->
 								<geometry>floor_contact metatarsal_r_contact_1 metatarsal_l_contact_1 metatarsal_r_contact_2 metatarsal_r_contact_3 metatarsal_l_contact_2 metatarsal_l_contact_3</geometry>
 								<stiffness>100000000</stiffness>
 								<dissipation>0.5</dissipation>
@@ -2130,6 +2485,64 @@
 			</objects>
 			<groups />
 		</ForceSet>
+		<!--Markers in the model.-->
+		<MarkerSet name="markerset">
+			<objects>
+				<Marker name="Hips">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/pelvis_body</socket_parent_frame>
+				</Marker>
+				<Marker name="LeftUpLeg">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/femur_l_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 0.1520160436630249 -0.075181059539318085</location>
+				</Marker>
+				<Marker name="RightUpLeg">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/femur_r_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 0.15201599895954132 -0.075180999934673309</location>
+				</Marker>
+				<Marker name="RightLeg">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-8.1054766479581139e-19 0.12255024909973145 0.12828826904296875</location>
+				</Marker>
+				<Marker name="LeftLeg">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/tibia_l_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 0.12255000323057175 0.12828800082206726</location>
+				</Marker>
+				<Marker name="LeftFoot">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>9.4888516949342075e-19 0.11228173971176147 -0.087814714759588242</location>
+				</Marker>
+				<Marker name="RightFoot">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 0.11228200048208237 -0.087815001606941223</location>
+				</Marker>
+				<Marker name="LeftFoot_End">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-6.9975625677319527e-19 -0.14568208903074265 0.19051867350935936</location>
+				</Marker>
+				<Marker name="RightFoot_End">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0 -0.14568200707435608 0.19051900506019592</location>
+				</Marker>
+			</objects>
+			<groups />
+		</MarkerSet>
 		<!--Geometry to be used in contact forces.-->
 		<ContactGeometrySet name="contactgeometryset">
 			<objects>
