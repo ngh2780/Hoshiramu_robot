@@ -314,6 +314,20 @@
 								<!--The radius of the sphere.-->
 								<radius>0.039999999105930328</radius>
 							</WrapSphere>
+							<WrapCylinder name="ankle_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 180</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.0027888305485248566 -0.20736999809741974 -0.06257300078868866</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.039999999105930328</radius>
+								<!--The length of the cylinder.-->
+								<length>0.05000000074505806</length>
+							</WrapCylinder>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -574,6 +588,20 @@
 								<!--The radius of the sphere.-->
 								<radius>0.039999999105930328</radius>
 							</WrapSphere>
+							<WrapCylinder name="ankle_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 180</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0021381378173828125 -0.20737037062644958 -0.062572594732046127</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.039999999105930328</radius>
+								<!--The length of the cylinder.-->
+								<length>0.05000000074505806</length>
+							</WrapCylinder>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -1298,12 +1326,6 @@
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.0027459710836410522 0.177875816822052 -0.052607662975788116</location>
-								</PathPoint>
-								<PathPoint name="gastrocnemius_l-P3">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0101480633020401 0.15417325496673584 -0.12402644380927086</location>
 								</PathPoint>
 							</objects>
@@ -1363,12 +1385,6 @@
 									<location>-0.021943509578704834 -0.12596988677978516 0.036598518490791321</location>
 								</PathPoint>
 								<PathPoint name="gastrocnemius_r-P2">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.0053700357675552368 0.17419973015785217 -0.060244709253311157</location>
-								</PathPoint>
-								<PathPoint name="gastrocnemius_r-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
@@ -1563,6 +1579,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="cranial_tibial_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>ankle_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_l_ActiveForceLengthCurve">
@@ -1625,6 +1655,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="cranial_tibial_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>ankle_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_r_ActiveForceLengthCurve">
