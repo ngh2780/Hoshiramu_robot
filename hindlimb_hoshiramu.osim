@@ -33,7 +33,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\pelvis.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\pelvis.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -135,7 +135,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_l.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\femur_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -243,7 +243,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_l.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\tibia_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -341,7 +341,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_l.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\metatarsal_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -395,7 +395,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\femur_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -503,7 +503,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\tibia_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -601,7 +601,7 @@
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.0020000000949949026 0.0020000000949949026 0.0020000000949949026</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>D:\Hoshiramu_robot\geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
+									<mesh_file>geometry_hoshiramu\metatarsal_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -1298,6 +1298,12 @@
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>-0.0027459710836410522 0.177875816822052 -0.052607662975788116</location>
+								</PathPoint>
+								<PathPoint name="gastrocnemius_l-P3">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0101480633020401 0.15417325496673584 -0.12402644380927086</location>
 								</PathPoint>
 							</objects>
@@ -1357,6 +1363,12 @@
 									<location>-0.021943509578704834 -0.12596988677978516 0.036598518490791321</location>
 								</PathPoint>
 								<PathPoint name="gastrocnemius_r-P2">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>-0.0053700357675552368 0.17419973015785217 -0.060244709253311157</location>
+								</PathPoint>
+								<PathPoint name="gastrocnemius_r-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
