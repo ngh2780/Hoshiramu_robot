@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<OpenSimDocument Version="40600">
-	<Model name="model">
+<OpenSimDocument Version="40500">
+	<Model name="Hoshiramu_hindlimb">
 		<!--The model's ground reference frame.-->
 		<Ground name="ground">
 			<!--The geometry used to display the axes of this Frame.-->
@@ -314,6 +314,20 @@
 								<!--The radius of the sphere.-->
 								<radius>0.039999999105930328</radius>
 							</WrapSphere>
+							<WrapCylinder name="ankle_wrap_l">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 90</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>0.0027888305485248566 -0.20736999809741974 -0.06257300078868866</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.039999999105930328</radius>
+								<!--The length of the cylinder.-->
+								<length>0.05000000074505806</length>
+							</WrapCylinder>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -574,6 +588,20 @@
 								<!--The radius of the sphere.-->
 								<radius>0.039999999105930328</radius>
 							</WrapSphere>
+							<WrapCylinder name="ankle_wrap_r">
+								<!--Whether or not the WrapObject is considered active in computing paths-->
+								<active>true</active>
+								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
+								<xyz_body_rotation>0 80 90</xyz_body_rotation>
+								<!--Translation of the WrapObject.-->
+								<translation>-0.0021381378173828125 -0.20737037062644958 -0.062572594732046127</translation>
+								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
+								<quadrant>x</quadrant>
+								<!--The radius of the cylinder.-->
+								<radius>0.039999999105930328</radius>
+								<!--The length of the cylinder.-->
+								<length>0.05000000074505806</length>
+							</WrapCylinder>
 						</objects>
 						<groups />
 					</WrapObjectSet>
@@ -1294,7 +1322,7 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.022236406803131104 -0.1257748007774353 0.03655204176902771</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_l-P3">
+								<PathPoint name="gastrocnemius_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
@@ -1356,7 +1384,7 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.021943509578704834 -0.12596988677978516 0.036598518490791321</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_r-P3">
+								<PathPoint name="gastrocnemius_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
@@ -1542,12 +1570,6 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0094274580478668213 0.095895767211914062 0.086186125874519348</location>
 								</PathPoint>
-								<PathPoint name="pathpoint">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>0.0080000003799796104 0.18000000715255737 -0.0030000000260770321</location>
-								</PathPoint>
 								<PathPoint name="cranial_tibial_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
@@ -1557,6 +1579,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="cranial_tibial_l_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>ankle_wrap_l</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_l_ActiveForceLengthCurve">
@@ -1610,12 +1646,6 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0084850490093231201 0.094351232051849365 0.085551142692565918</location>
 								</PathPoint>
-								<PathPoint name="pathpoint">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.0070000002160668373 -0.15000000596046448 -0.079999998211860657</location>
-								</PathPoint>
 								<PathPoint name="cranial_tibial_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
@@ -1625,6 +1655,20 @@
 							</objects>
 							<groups />
 						</PathPointSet>
+						<!--The wrap objects that are associated with this path-->
+						<PathWrapSet>
+							<objects>
+								<PathWrap name="cranial_tibial_r_wrapping">
+									<!--A WrapObject that this PathWrap interacts with.-->
+									<wrap_object>ankle_wrap_r</wrap_object>
+									<!--The wrapping method used to solve the path around the wrap object.-->
+									<method>hybrid</method>
+									<!--The range of indices to use to compute the path over the wrap object.-->
+									<range>-1 -1</range>
+								</PathWrap>
+							</objects>
+							<groups />
+						</PathWrapSet>
 					</GeometryPath>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_r_ActiveForceLengthCurve">
@@ -2532,7 +2576,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-6.9975625677319527e-19 -0.14568208903074265 0.19051867350935936</location>
+					<location>0 -0.14568200000000001 0.19051899999999999</location>
 				</Marker>
 				<Marker name="RightFoot_End">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
@@ -2688,7 +2732,7 @@
 				<!--Flag to indicate whether or not to show wrap geometry, default to true.-->
 				<show_wrap_geometry>true</show_wrap_geometry>
 				<!--Flag to indicate whether or not to show frames, default to false.-->
-				<show_frames>true</show_frames>
+				<show_frames>false</show_frames>
 			</ModelDisplayHints>
 		</ModelVisualPreferences>
 	</Model>
