@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<OpenSimDocument Version="40600">
-	<Model name="model-scaled">
+<OpenSimDocument Version="40500">
+	<Model name="model-scaledx0.4">
 		<!--The model's ground reference frame.-->
 		<Ground name="ground">
 			<!--The geometry used to display the axes of this Frame.-->
@@ -1324,12 +1324,6 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0088945627212524414 -0.050309920310974122 0.014620816707611084</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_l-P2">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.001098388433456421 0.071150326728820809 -0.021043065190315249</location>
-								</PathPoint>
 								<PathPoint name="gastrocnemius_l-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
@@ -1341,9 +1335,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.039999999999999987</optimal_fiber_length>
+					<optimal_fiber_length>0.03999999999999998</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.079999999999999974</tendon_slack_length>
+					<tendon_slack_length>0.07999999999999996</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gastrocnemius_l_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1396,12 +1390,6 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0087774038314819332 -0.050387954711914068 0.014639407396316528</location>
 								</PathPoint>
-								<PathPoint name="gastrocnemius_r-P2">
-									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
-									<!--The fixed location of the path point expressed in its parent frame.-->
-									<location>-0.002148014307022095 0.069679892063140875 -0.024097883701324464</location>
-								</PathPoint>
 								<PathPoint name="gastrocnemius_r-P3">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
@@ -1413,9 +1401,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.040000000000000001</optimal_fiber_length>
+					<optimal_fiber_length>0.040000000000000008</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.080000000000000002</tendon_slack_length>
+					<tendon_slack_length>0.080000000000000016</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="gastrocnemius_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -1600,6 +1588,12 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.0037709832191467289 0.038358306884765631 0.034474450349807742</location>
 								</PathPoint>
+								<PathPoint name="pathpoint">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>0.0032000001519918442 0.072000002861022955 -0.001200000010430813</location>
+								</PathPoint>
 								<PathPoint name="cranial_tibial_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
@@ -1666,6 +1660,12 @@
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0033940196037292483 0.037740492820739747 0.034220457077026367</location>
 								</PathPoint>
+								<PathPoint name="pathpoint">
+									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
+									<socket_parent_frame>/bodyset/tibia_r_body</socket_parent_frame>
+									<!--The fixed location of the path point expressed in its parent frame.-->
+									<location>-0.0028000000864267351 -0.060000002384185791 -0.031999999284744264</location>
+								</PathPoint>
 								<PathPoint name="cranial_tibial_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
 									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
@@ -1677,9 +1677,9 @@
 						</PathPointSet>
 					</GeometryPath>
 					<!--Optimal length of the muscle fibers-->
-					<optimal_fiber_length>0.040000000000000008</optimal_fiber_length>
+					<optimal_fiber_length>0.040000000000000001</optimal_fiber_length>
 					<!--Resting length of the tendon-->
-					<tendon_slack_length>0.080000000000000016</tendon_slack_length>
+					<tendon_slack_length>0.080000000000000002</tendon_slack_length>
 					<!--Active-force-length curve.-->
 					<ActiveForceLengthCurve name="cranial_tibial_r_ActiveForceLengthCurve">
 						<!--Minimum value of the active-force-length curve-->
@@ -2628,13 +2628,13 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0 -0.043694900000000002 0.040702799999999997</location>
+					<location>-2.7990250270927815e-19 -0.058272835612297062 0.076207469403743747</location>
 				</Marker>
 				<Marker name="RightFoot_End">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0 -0.043694900000000002 0.040702799999999997</location>
+					<location>0 -0.058272802829742433 0.076207602024078377</location>
 				</Marker>
 			</objects>
 			<groups />
@@ -2645,8 +2645,6 @@
 				<ContactHalfSpace name="floor_contact">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
 					<socket_frame>/ground</socket_frame>
-					<!--Location of geometry center in the PhysicalFrame.-->
-					<location>0 0.35573112964630127 0</location>
 					<!--Orientation of geometry in the PhysicalFrame (body-fixed XYZ Euler angles).-->
 					<orientation>0 0 -1.5707962512969971</orientation>
 					<!--Default appearance for this Geometry-->
