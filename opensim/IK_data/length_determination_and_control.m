@@ -1,5 +1,5 @@
 %% Put normalized muscle lengths to a cell with each names
-muscles = cell(8, 4);
+muscles = cell(8, 3);
 muscles{1, 1} = "IP";
 muscles{1, 2} = muscle_ip_normalized;
 muscles{2, 1} = "GLU";
@@ -29,32 +29,47 @@ for muscle_index = 1 : 8
 % write in muscles cell, 3 for muscle length, 4 for extreme time
     for i = period_interval(1) + 1 : period_interval(2) - 1
         
-        if muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i+1)
+        if rem(i, 3) == 0
             muscle_extreme(counting) = muscles{muscle_index, 2}(i);
             time_linear(counting) = time(i);
             if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
                 counting = counting + 1;
             end
+        end
+        if muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i+1)
+            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
+            time_linear(counting) = time(i);
+            counting = counting + 1;
+            % if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
+            %     counting = counting + 1;
+            % end
         end
         if muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i+1)
             muscle_extreme(counting) = muscles{muscle_index, 2}(i);
             time_linear(counting) = time(i);
-            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
-                counting = counting + 1;
-            end
+            counting = counting + 1;
+            % if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
+            %     counting = counting + 1;
+            % end
         end
         
     end
 
-    muscle_extreme(counting) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
-    muscle_extreme(1) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
+    if muscles{muscle_index, 2}(period_interval(1)) == 1 || muscles{muscle_index, 2}(period_interval(2)) == 1
+        muscle_extreme(counting) = 1;
+        muscle_extreme(1) = 1;
+    else
+        muscle_extreme(counting) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
+        muscle_extreme(1) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
+    end
+    
     time_linear(counting) = time(period_interval(2));
     time_linear = (time_linear - time(15)) * 2.5;
     muscle_extreme = muscle_extreme(1:counting);
     time_linear = time_linear(1:counting);
 
-    muscles{muscle_index, 3} = muscle_extreme;
-    muscles{muscle_index, 4} = time_linear;
+    muscles{muscle_index, 3}(1, :) = muscle_extreme;
+    muscles{muscle_index, 3}(2, :) = time_linear;
 end
 
 %% Put joint angles to a cell with each names
@@ -95,7 +110,7 @@ for muscle_index = 1 : 8
     p_muscle.LineWidth = 1.5;
     p_muscle.LineStyle = "-";
     p_muscle.HandleVisibility = "off";
-    p_muscle_linear = plot(muscles{muscle_index, 4}, muscles{muscle_index, 3}, 'o-');
+    p_muscle_linear = plot(muscles{muscle_index, 3}(2, :), muscles{muscle_index, 3}(1, :), 'o-');
     p_muscle_linear.LineWidth = 1;
     p_muscle_linear.HandleVisibility = "off";
     ylabel("Normalized muscle length "+ "(" + muscles{muscle_index, 1} + ")");

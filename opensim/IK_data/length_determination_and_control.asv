@@ -17,27 +17,30 @@ muscles{7, 2} = muscle_gn_normalized;
 muscles{8, 1} = "CT";
 muscles{8, 2} = muscle_ct_normalized;
 
-%% local extreme write in
+%% local extreme for piecewise linear
 for muscle_index = 1 : 8
 
     counting = 2;
     muscle_extreme = zeros(size(muscles{muscle_index, 2}));
     time_linear = zeros(size(time));
     time_linear(1) = time(15);
-% pick up the local extreme value without similarity 95%(reduce pl
+% pick up the local extreme value without similarity 99%
+% (reduce poit at same level)
+% write in muscles cell, 3 for muscle length, 4 for extreme time
     for i = period_interval(1) + 1 : period_interval(2) - 1
         
+        if rem()
         if muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i+1)
             muscle_extreme(counting) = muscles{muscle_index, 2}(i);
             time_linear(counting) = time(i);
-            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.95 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.05
+            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
                 counting = counting + 1;
             end
         end
         if muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i+1)
             muscle_extreme(counting) = muscles{muscle_index, 2}(i);
             time_linear(counting) = time(i);
-            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.015
+            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
                 counting = counting + 1;
             end
         end
