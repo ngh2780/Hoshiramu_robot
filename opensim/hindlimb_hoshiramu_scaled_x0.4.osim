@@ -342,10 +342,10 @@
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>9.4239997863769577e-05 9.4239997863769577e-05 9.4239997863769577e-05 0 0 0</inertia>
 				</Body>
-				<Body name="pes_l_body">
+				<Body name="metatarsal_l_body">
 					<!--List of components that this component owns and serializes.-->
 					<components>
-						<PhysicalOffsetFrame name="pes_l_geom_offset">
+						<PhysicalOffsetFrame name="metatarsal_l_geom_offset">
 							<!--The geometry used to display the axes of this Frame.-->
 							<FrameGeometry name="frame_geometry">
 								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
@@ -355,13 +355,13 @@
 							</FrameGeometry>
 							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
 							<attached_geometry>
-								<Mesh name="pes_l_geom">
+								<Mesh name="metatarsal_l_geom">
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.00080000003799796104 0.00080000003799796104 0.00080000003799796104</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>geometry\pes_l.obj</mesh_file>
+									<mesh_file>geometry\metatarsal_l.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -622,10 +622,10 @@
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
 					<inertia>7.6480001211166407e-05 7.6480001211166407e-05 7.6480001211166407e-05 0 0 0</inertia>
 				</Body>
-				<Body name="pes_r_body">
+				<Body name="metatarsal_r_body">
 					<!--List of components that this component owns and serializes.-->
 					<components>
-						<PhysicalOffsetFrame name="pes_r_geom_offset">
+						<PhysicalOffsetFrame name="metatarsal_r_geom_offset">
 							<!--The geometry used to display the axes of this Frame.-->
 							<FrameGeometry name="frame_geometry">
 								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
@@ -635,13 +635,13 @@
 							</FrameGeometry>
 							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
 							<attached_geometry>
-								<Mesh name="pes_r_geom">
+								<Mesh name="metatarsal_r_geom">
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
 									<scale_factors>0.00080000003799796104 0.00080000003799796104 0.00080000003799796104</scale_factors>
 									<!--Name of geometry file.-->
-									<mesh_file>geometry\pes_r_mirrored.obj</mesh_file>
+									<mesh_file>geometry\metatarsal_r_mirrored.obj</mesh_file>
 								</Mesh>
 							</attached_geometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
@@ -842,14 +842,14 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</PinJoint>
-				<PinJoint name="tibia_l_to_pes_l">
+				<PinJoint name="tibia_l_to_metatarsal_l">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>tibia_l_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
-					<socket_child_frame>pes_l_body_offset</socket_child_frame>
+					<socket_child_frame>metatarsal_l_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="tibia_l_to_pes_l_rz">
+						<Coordinate name="tibia_l_to_metatarsal_l_rz">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 						</Coordinate>
@@ -871,7 +871,7 @@
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-2.0934405326843262 1.4757480621337891 2.6397716999053955</orientation>
 						</PhysicalOffsetFrame>
-						<PhysicalOffsetFrame name="pes_l_body_offset">
+						<PhysicalOffsetFrame name="metatarsal_l_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
 							<FrameGeometry name="frame_geometry">
 								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
@@ -880,7 +880,7 @@
 								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 							</FrameGeometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
-							<socket_parent>/bodyset/pes_l_body</socket_parent>
+							<socket_parent>/bodyset/metatarsal_l_body</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>0.00016161799430847168 0.05216230154037476 -0.023017223179340365</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
@@ -980,14 +980,14 @@
 						</PhysicalOffsetFrame>
 					</frames>
 				</PinJoint>
-				<PinJoint name="tibia_r_to_pes_r">
+				<PinJoint name="tibia_r_to_metatarsal_r">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
 					<socket_parent_frame>tibia_r_body_offset</socket_parent_frame>
 					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
-					<socket_child_frame>pes_r_body_offset</socket_child_frame>
+					<socket_child_frame>metatarsal_r_body_offset</socket_child_frame>
 					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
 					<coordinates>
-						<Coordinate name="tibia_r_to_pes_r_rz">
+						<Coordinate name="tibia_r_to_metatarsal_r_rz">
 							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
 							<default_value>0</default_value>
 						</Coordinate>
@@ -1009,7 +1009,7 @@
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-2.093437671661377 1.4757480621337891 2.6397688388824463</orientation>
 						</PhysicalOffsetFrame>
-						<PhysicalOffsetFrame name="pes_r_body_offset">
+						<PhysicalOffsetFrame name="metatarsal_r_body_offset">
 							<!--The geometry used to display the axes of this Frame.-->
 							<FrameGeometry name="frame_geometry">
 								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
@@ -1018,7 +1018,7 @@
 								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
 							</FrameGeometry>
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
-							<socket_parent>/bodyset/pes_r_body</socket_parent>
+							<socket_parent>/bodyset/metatarsal_r_body</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
 							<translation>-0.0015082299709320069 0.052154946327209475 -0.02302169352769852</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
@@ -1354,7 +1354,7 @@
 								</PathPoint>
 								<PathPoint name="gastrocnemius_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/pes_l_body</socket_parent_frame>
+									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.00405922532081604 0.06166930198669434 -0.049610577523708344</location>
 								</PathPoint>
@@ -1420,7 +1420,7 @@
 								</PathPoint>
 								<PathPoint name="gastrocnemius_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/pes_r_body</socket_parent_frame>
+									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0042764365673065184 0.062048041820526124 -0.049430219829082495</location>
 								</PathPoint>
@@ -1618,7 +1618,7 @@
 								</PathPoint>
 								<PathPoint name="cranial_tibial_l-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/pes_l_body</socket_parent_frame>
+									<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>0.003290754556655884 0.020063304901123048 -0.011687479913234711</location>
 								</PathPoint>
@@ -1698,7 +1698,7 @@
 								</PathPoint>
 								<PathPoint name="cranial_tibial_r-P2">
 									<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame in which this path point is defined.).-->
-									<socket_parent_frame>/bodyset/pes_r_body</socket_parent_frame>
+									<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 									<!--The fixed location of the path point expressed in its parent frame.-->
 									<location>-0.0029347538948059082 0.020071369409561158 -0.010908238589763641</location>
 								</PathPoint>
@@ -2609,7 +2609,7 @@
 						<objects>
 							<HuntCrossleyForce::ContactParameters>
 								<!--Names of geometry objects affected by these parameters.-->
-								<geometry>floor_contact pes_r_contact_1 pes_l_contact_1 pes_r_contact_2 pes_r_contact_3 pes_l_contact_2 pes_l_contact_3</geometry>
+								<geometry>floor_contact metatarsal_r_contact_1 metatarsal_l_contact_1 metatarsal_r_contact_2 metatarsal_r_contact_3 metatarsal_l_contact_2 metatarsal_l_contact_3</geometry>
 								<stiffness>100000000</stiffness>
 								<dissipation>0.5</dissipation>
 								<static_friction>0.90000000000000002</static_friction>
@@ -2658,25 +2658,25 @@
 				</Marker>
 				<Marker name="LeftFoot">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
-					<socket_parent_frame>/bodyset/pes_l_body</socket_parent_frame>
+					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>3.7955406779736832e-19 0.04491269588470459 -0.035125885903835301</location>
 				</Marker>
 				<Marker name="RightFoot">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
-					<socket_parent_frame>/bodyset/pes_r_body</socket_parent_frame>
+					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 0.044912800192832947 -0.035126000642776489</location>
 				</Marker>
 				<Marker name="LeftFoot_End">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
-					<socket_parent_frame>/bodyset/pes_l_body</socket_parent_frame>
+					<socket_parent_frame>/bodyset/metatarsal_l_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 -0.058272800000000007 0.0762076</location>
 				</Marker>
 				<Marker name="RightFoot_End">
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
-					<socket_parent_frame>/bodyset/pes_r_body</socket_parent_frame>
+					<socket_parent_frame>/bodyset/metatarsal_r_body</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
 					<location>0 -0.058272802829742433 0.076207602024078377</location>
 				</Marker>
@@ -2704,9 +2704,9 @@
 						</SurfaceProperties>
 					</Appearance>
 				</ContactHalfSpace>
-				<ContactSphere name="pes_r_contact_1">
+				<ContactSphere name="metatarsal_r_contact_1">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_r_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_r_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>0.0024250000000000001 -0.044670000000000001 0.027501000000000001</location>
 					<!--Orientation of geometry in the PhysicalFrame (body-fixed XYZ Euler angles).-->
@@ -2724,9 +2724,9 @@
 					<!--Radius of the sphere (default: 0).-->
 					<radius>0.012</radius>
 				</ContactSphere>
-				<ContactSphere name="pes_l_contact_1">
+				<ContactSphere name="metatarsal_l_contact_1">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_l_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_l_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>-0.0024250000000000001 -0.044670000000000001 0.027501000000000001</location>
 					<!--Default appearance for this Geometry-->
@@ -2742,9 +2742,9 @@
 					<!--Radius of the sphere (default: 0).-->
 					<radius>0.012</radius>
 				</ContactSphere>
-				<ContactSphere name="pes_r_contact_2">
+				<ContactSphere name="metatarsal_r_contact_2">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_r_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_r_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>-0.0074568000000000004 -0.052176 0.052124999999999998</location>
 					<!--Orientation of geometry in the PhysicalFrame (body-fixed XYZ Euler angles).-->
@@ -2762,9 +2762,9 @@
 					<!--Radius of the sphere (default: 0).-->
 					<radius>0.0080000000000000002</radius>
 				</ContactSphere>
-				<ContactSphere name="pes_r_contact_3">
+				<ContactSphere name="metatarsal_r_contact_3">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_r_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_r_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>0.015032999999999999 -0.052176 0.052124999999999998</location>
 					<!--Orientation of geometry in the PhysicalFrame (body-fixed XYZ Euler angles).-->
@@ -2782,9 +2782,9 @@
 					<!--Radius of the sphere (default: 0).-->
 					<radius>0.0080000000000000002</radius>
 				</ContactSphere>
-				<ContactSphere name="pes_l_contact_2">
+				<ContactSphere name="metatarsal_l_contact_2">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_l_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_l_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>0.0074568000000000004 -0.052176 0.052124999999999998</location>
 					<!--Default appearance for this Geometry-->
@@ -2800,9 +2800,9 @@
 					<!--Radius of the sphere (default: 0).-->
 					<radius>0.0080000000000000002</radius>
 				</ContactSphere>
-				<ContactSphere name="pes_l_contact_3">
+				<ContactSphere name="metatarsal_l_contact_3">
 					<!--Path to a Component that satisfies the Socket 'frame' of type PhysicalFrame (description: The frame to which this geometry is attached.).-->
-					<socket_frame>/bodyset/pes_l_body</socket_frame>
+					<socket_frame>/bodyset/metatarsal_l_body</socket_frame>
 					<!--Location of geometry center in the PhysicalFrame.-->
 					<location>-0.015032999999999999 -0.052176 0.052124999999999998</location>
 					<!--Default appearance for this Geometry-->

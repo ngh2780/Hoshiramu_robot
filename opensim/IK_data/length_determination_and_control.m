@@ -1,21 +1,21 @@
-%% Put normalized muscle lengths to a cell with each names
+%% Put muscle lengths to a cell with each names
 muscles = cell(8, 2);
 muscles{1, 1} = "IP";
-muscles{1, 2} = muscle_ip_normalized;
+muscles{1, 2} = muscle_ip;
 muscles{2, 1} = "GLU";
-muscles{2, 2} = muscle_glu_normalized;
+muscles{2, 2} = muscle_glu;
 muscles{3, 1} = "BF";
-muscles{3, 2} = muscle_bf_normalized;
+muscles{3, 2} = muscle_bf;
 muscles{4, 1} = "SMT";
-muscles{4, 2} = muscle_smt_normalized;
+muscles{4, 2} = muscle_smt;
 muscles{5, 1} = "QF\RF";
-muscles{5, 2} = muscle_vl_normalized;
+muscles{5, 2} = muscle_vl;
 muscles{6, 1} = "RF";
-muscles{6, 2} = muscle_rf_normalized;
+muscles{6, 2} = muscle_rf;
 muscles{7, 1} = "GN";
-muscles{7, 2} = muscle_gn_normalized;
+muscles{7, 2} = muscle_gn;
 muscles{8, 1} = "CT";
-muscles{8, 2} = muscle_ct_normalized;
+muscles{8, 2} = muscle_ct;
 
 %% Put joint angles to a cell with each names
 joints = cell(3, 2);
@@ -32,6 +32,16 @@ time_correction = time - time(15);
 time_correction(60 : end) = [];
 time_correction(1 : 14) = [];
 time_extended = time_correction * 2.5;
+
+%% Normalize muscle lengths for one period
+for muscle_index = 1 : 8
+    muscles{muscle_index, 2}(period_interval(2) + 1 : end) = [];
+    muscles{muscle_index, 2}(1 : period_interval(1) - 1) = [];
+    [~, max_length_temp_index] = max(muscles{muscle_index, 2});
+    muscles{muscle_index, 2} = muscles{muscle_index, 2} / muscles{muscle_index, 2}(max_length_temp_index);
+    clear("max_length_temp_index");
+end
+clear("muscle_index")
 
 %% Print figures
 for muscle_index = 1 : 8
@@ -51,7 +61,7 @@ for muscle_index = 1 : 8
     lgd_muscle.NumColumns = 3;
     ylabel("Joint angle [deg]");
     yyaxis right
-    p_muscle = plot(time_extended, muscles{muscle_index, 2}(period_interval(1) : period_interval(2)));
+    p_muscle = plot(time_extended, muscles{muscle_index, 2});
     p_muscle.LineWidth = 1.5;
     p_muscle.LineStyle = "-";
     p_muscle.HandleVisibility = "off";
@@ -65,7 +75,4 @@ for muscle_index = 1 : 8
          saveas(gca, muscles{muscle_index, 1} + ".fig");
          saveas(gca, muscles{muscle_index, 1} + ".svg");
     end
-
-
-
-   end
+end
