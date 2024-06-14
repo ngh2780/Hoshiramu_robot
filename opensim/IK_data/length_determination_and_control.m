@@ -1,76 +1,21 @@
-%% Put normalized muscle lengths to a cell with each names
+%% Put muscle lengths to a cell with each names
 muscles = cell(8, 3);
 muscles{1, 1} = "IP";
-muscles{1, 2} = muscle_ip_normalized;
+muscles{1, 2} = muscle_ip;
 muscles{2, 1} = "GLU";
-muscles{2, 2} = muscle_glu_normalized;
+muscles{2, 2} = muscle_glu;
 muscles{3, 1} = "BF";
-muscles{3, 2} = muscle_bf_normalized;
+muscles{3, 2} = muscle_bf;
 muscles{4, 1} = "SMT";
-muscles{4, 2} = muscle_smt_normalized;
+muscles{4, 2} = muscle_smt;
 muscles{5, 1} = "QF\RF";
-muscles{5, 2} = muscle_vl_normalized;
+muscles{5, 2} = muscle_vl;
 muscles{6, 1} = "RF";
-muscles{6, 2} = muscle_rf_normalized;
+muscles{6, 2} = muscle_rf;
 muscles{7, 1} = "GN";
-muscles{7, 2} = muscle_gn_normalized;
+muscles{7, 2} = muscle_gn;
 muscles{8, 1} = "CT";
-muscles{8, 2} = muscle_ct_normalized;
-
-%% local extreme for piecewise linear
-for muscle_index = 1 : 8
-
-    counting = 2;
-    muscle_extreme = zeros(size(muscles{muscle_index, 2}));
-    time_linear = zeros(size(time));
-    time_linear(1) = time(15);
-% pick up the local extreme value without similarity 99%
-% (reduce poit at same level)
-% write in muscles cell, 3 for muscle length, 4 for extreme time
-    for i = period_interval(1) + 1 : period_interval(2) - 1
-        
-        if rem(i, 3) == 0
-            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
-            time_linear(counting) = time(i);
-            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
-                counting = counting + 1;
-            end
-        end
-        if muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i+1)
-            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
-            time_linear(counting) = time(i);
-            counting = counting + 1;
-            % if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
-            %     counting = counting + 1;
-            % end
-        end
-        if muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i+1)
-            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
-            time_linear(counting) = time(i);
-            counting = counting + 1;
-            % if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
-            %     counting = counting + 1;
-            % end
-        end
-        
-    end
-
-    if muscles{muscle_index, 2}(period_interval(1)) == 1 || muscles{muscle_index, 2}(period_interval(2)) == 1
-        muscle_extreme(counting) = 1;
-        muscle_extreme(1) = 1;
-    else
-        muscle_extreme(counting) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
-        muscle_extreme(1) = ( muscles{muscle_index, 2}(period_interval(1)) + muscles{muscle_index, 2}(period_interval(2)) ) / 2;
-    end
-    
-    time_linear(counting) = time(period_interval(2));
-    time_linear = (time_linear - time(15)) * 2.5;
-    muscle_extreme = muscle_extreme(1:counting);
-    time_linear = time_linear(1:counting);
-
-    muscles{muscle_index, 3}(1, :) = muscle_extreme;
-    muscles{muscle_index, 3}(2, :) = time_linear;
-end
+muscles{8, 2} = muscle_ct;
 
 %% Put joint angles to a cell with each names
 joints = cell(3, 2);
@@ -87,6 +32,71 @@ time_correction = time - time(15);
 time_correction(60 : end) = [];
 time_correction(1 : 14) = [];
 time_extended = time_correction * 2.5;
+
+%% Normalize muscle lengths for one period
+for muscle_index = 1 : 8
+    muscles{muscle_index, 2}(period_interval(2) + 1 : end) = [];
+    muscles{muscle_index, 2}(1 : period_interval(1) - 1) = [];
+    [~, max_length_temp_index] = max(muscles{muscle_index, 2});
+    muscles{muscle_index, 2} = muscles{muscle_index, 2} / muscles{muscle_index, 2}(max_length_temp_index);
+    clear("max_length_temp_index");
+end
+clear("muscle_index")
+
+
+
+%% local extreme for piecewise linear
+for muscle_index = 1 : 8
+
+    counting = 2;
+    muscle_extreme = zeros(size(muscles{muscle_index, 2}));
+    time_linear = zeros(size(time));
+    time_linear(1) = time(15);
+% pick up the local extreme value without similarity 99%
+% (reduce poit at same level)
+% write in muscles cell, 3 for muscle length, 4 for extreme time
+    for i = 2 : period_interval(2) - period_interval(1) - 1
+
+        if rem(i, 3) == 0
+            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
+            time_linear(counting) = time(i + period_interval(1) - 1);
+            if muscle_extreme(counting) / muscle_extreme(counting-1) < 0.99 || muscle_extreme(counting) / muscle_extreme(counting-1) > 1.01
+                counting = counting + 1;
+            end
+        end
+
+        if muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) >= muscles{muscle_index, 2}(i+1)
+            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
+            time_linear(counting) = time(i + period_interval(1) - 1);
+            counting = counting + 1;
+        end
+
+        if muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i-1) && muscles{muscle_index, 2}(i) <= muscles{muscle_index, 2}(i+1)
+            muscle_extreme(counting) = muscles{muscle_index, 2}(i);
+            time_linear(counting) = time(i + period_interval(1) - 1);
+            counting = counting + 1;
+        end
+
+    end
+
+    if muscles{muscle_index, 2}(1) == 1 || muscles{muscle_index, 2}(period_interval(2) - period_interval(1)) == 1
+        muscle_extreme(counting) = 1;
+        muscle_extreme(1) = 1;
+    else
+        muscle_extreme(counting) = ( muscles{muscle_index, 2}(1) + muscles{muscle_index, 2}(period_interval(2) - period_interval(1)) ) / 2;
+        muscle_extreme(1) = ( muscles{muscle_index, 2}(1) + muscles{muscle_index, 2}(period_interval(2) - period_interval(1)) ) / 2;
+    end
+
+    time_linear(counting) = time(period_interval(2));
+    time_linear = (time_linear - time(15)) * 2.5;
+    muscle_extreme = muscle_extreme(1:counting);
+    time_linear = time_linear(1:counting);
+
+    muscles{muscle_index, 3}(1, :) = muscle_extreme;
+    muscles{muscle_index, 3}(2, :) = time_linear;
+end
+
+
 
 %% Print figures
 for muscle_index = 1 : 8
@@ -106,7 +116,7 @@ for muscle_index = 1 : 8
     lgd_muscle.NumColumns = 3;
     ylabel("Joint angle [deg]");
     yyaxis right
-    p_muscle = plot(time_extended, muscles{muscle_index, 2}(period_interval(1) : period_interval(2)));
+    p_muscle = plot(time_extended, muscles{muscle_index, 2});
     p_muscle.LineWidth = 1.5;
     p_muscle.LineStyle = "-";
     p_muscle.HandleVisibility = "off";
@@ -123,7 +133,4 @@ for muscle_index = 1 : 8
          saveas(gca, muscles{muscle_index, 1} + ".fig");
          saveas(gca, muscles{muscle_index, 1} + ".svg");
     end
-
-
-
- end
+end
