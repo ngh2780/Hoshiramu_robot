@@ -1,0 +1,83 @@
+[33mcommit 815439e8784046808d6e6bfd2c746dd496c487b5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Thu Jul 4 01:26:44 2024 +0900
+
+    miscellaneous
+
+[33mcommit d141c96c8e421be482e6905761b957b28b831749[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Thu Jul 4 01:25:06 2024 +0900
+
+    miscellaneous
+
+[33mcommit 112b8a7623e6b9629a00c76d5eeead15dc5cb208[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Thu Jul 4 01:23:42 2024 +0900
+
+    miscellaneous
+
+[33mcommit 22d1488fba7cdc1f914758266f6e84cc2d87bde3[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Wed Jun 19 14:01:31 2024 +0900
+
+    changed names of pam components
+
+[33mcommit 4c5372209a41af34016d654b17911a7b2b7f38b5[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Wed Jun 19 01:55:21 2024 +0900
+
+    added graphs for initial muscle lengths
+
+[33mcommit ec271a4175a55d423c3811120d42400b2c79c7da[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Mon Jun 17 03:12:45 2024 +0900
+
+    added data for muscle&ligament lenghts
+
+[33mcommit b028b2c41a18bc034d5ec858622779174dcd698f[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Mon Jun 17 03:03:13 2024 +0900
+
+    added references for joints and ligaments
+
+[33mcommit 7ba3404996df22da69e724656afc3af32b379887[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Fri Jun 7 19:13:27 2024 +0900
+
+    added bone attachment component
+
+[33mcommit d26dd66ee5340ff9ae73f8e9f75287f27163b80c[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Fri Jun 7 18:08:13 2024 +0900
+
+    modified matlab file and added 3d printing files
+
+[33mcommit 79842220a397a20f0fa4fe5f7d00351dc8c44836[m
+Author: gihyeok <ngh2780@gmail.com>
+Date:   Tue Jun 4 03:47:43 2024 +0900
+
+    added stl fies and IK data
+
+[33mcommit 619bfe8b8b3a1513d80a49ea939621e7aa2e53dd[m
+Author: Gihyeok Na <64770786+ngh2780@users.noreply.github.com>
+Date:   Sat May 11 03:59:03 2024 +0900
+
+    Delete geometry_hoshiramu/dummy
+
+[33mcommit 46c5b4ada8c8307a6e97faebf820f9c19412815d[m
+Author: Gihyeok Na <64770786+ngh2780@users.noreply.github.com>
+Date:   Sat May 11 03:57:55 2024 +0900
+
+    Add files via upload
+
+[33mcommit 79d4976ca59f21469881a4e39d5e98bcb3248a00[m
+Author: Gihyeok Na <64770786+ngh2780@users.noreply.github.com>
+Date:   Sat May 11 03:56:37 2024 +0900
+
+    Create dummy
+
+[33mcommit f7d995f206c49d4da555698d29c4dd7ba4ea4e69[m
+Author: Gihyeok Na <64770786+ngh2780@users.noreply.github.com>
+Date:   Sat May 11 03:49:56 2024 +0900
+
+    Add files via upload
