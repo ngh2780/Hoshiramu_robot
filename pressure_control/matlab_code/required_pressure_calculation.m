@@ -11,7 +11,7 @@ SAVE_FIGURES = true;
 
 % Initialize constants
 timeline_extension_factor = 2; % Factor for extending time intervals
-[length_terminal_end, length_input_connector] = deal(5.9, 8.4); % Component lengths (mm)
+[length_terminal_end, length_input_connector] = deal(5.9, 11.5); % Component lengths (mm)
 timeline_extended_one_cycle = timeline * timeline_extension_factor; % Extend time intervals
 timeline_extended_two_cycles = [timeline_extended_one_cycle, timeline_extended_one_cycle(end) + timeline_extended_one_cycle(2:end)]; % Time for two cycles
 air_pressure_range_MPa = 0:0.005:0.5; % Applied air pressure range (MPa)
