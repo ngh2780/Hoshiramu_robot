@@ -8,8 +8,8 @@ load('../matlab_data/require_pressure_calculation_data.mat', 'muscle_data');
 
 %% Define constants
 LENGTH_TERMINAL_END = 5.9;  % Length of terminal end (mm)
-LENGTH_INPUT_CONNECTOR = 8.4;  % Length of input connector (mm)
-SAVE_FIGURES = true;  % Flag to save figures
+LENGTH_INPUT_CONNECTOR = 11.5;  % Length of input connector (mm)
+SAVE_FIGURES = false;  % Flag to save figures
 NUM_TENDON_LENGTHS = 10;  % Number of different tendon lengths to plot
 TENDON_LENGTH_INCREMENT = 10;  % Increment of tendon length (mm)
 
