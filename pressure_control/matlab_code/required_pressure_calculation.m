@@ -10,17 +10,18 @@ PLOT_GRAPHS = true;
 SAVE_FIGURES = true;
 
 % Initialize constants
-timeline_extension_factor = 2; % Factor for extending time intervals
-[length_terminal_end, length_input_connector] = deal(5.9, 11.5); % Component lengths (mm)
-timeline_extended_one_cycle = timeline * timeline_extension_factor; % Extend time intervals
+TIMELINE_EXTENSION_FACTOR = 2; % Factor for extending time intervals
+LENGTH_TERMINAL_END = 6.5;
+LENGTH_INPUT_CONNECTOR = 12.1;
+timeline_extended_one_cycle = timeline * TIMELINE_EXTENSION_FACTOR; % Extend time intervals
 timeline_extended_two_cycles = [timeline_extended_one_cycle, timeline_extended_one_cycle(end) + timeline_extended_one_cycle(2:end)]; % Time for two cycles
 air_pressure_range_MPa = 0:0.005:0.5; % Applied air pressure range (MPa)
 
 %% Process muscle data
 for muscle_index = 2:11 % For all muscles
-    muscle_data = process_muscle(muscle_data, muscle_index, length_terminal_end, length_input_connector, ...
+    muscle_data = process_muscle(muscle_data, muscle_index, LENGTH_TERMINAL_END, LENGTH_INPUT_CONNECTOR, ...
                                  air_pressure_MPa, air_pressure_range_MPa, contraction_ratio_pressurize, ...
-                                 contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, timeline_extension_factor);
+                                 contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, TIMELINE_EXTENSION_FACTOR);
 % Amplify CT's pressure
     if muscle_index == 11
         muscle_data{muscle_index, 11} = muscle_data{muscle_index, 11} * 3;
@@ -28,40 +29,40 @@ for muscle_index = 2:11 % For all muscles
 end
 
 %% Plot and export results
-plot_and_export_results(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, timeline_extension_factor, PLOT_GRAPHS, SAVE_FIGURES);
+plot_and_export_results(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, TIMELINE_EXTENSION_FACTOR, PLOT_GRAPHS, SAVE_FIGURES);
 
 %% Clear unnecessary variables
 clearvars -except muscle_data air_pressure_MPa contraction_ratio_pressurize contraction_ratio_depressurize timeline
 
 %% Function definitions
 
-function muscle_data = process_muscle(muscle_data, muscle_index, length_terminal_end, length_input_connector, ...
+function muscle_data = process_muscle(muscle_data, muscle_index, LENGTH_TERMINAL_END, LENGTH_INPUT_CONNECTOR, ...
                                       air_pressure_MPa, air_pressure_range_MPa, contraction_ratio_pressurize, ...
-                                      contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, timeline_extension_factor)
+                                      contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, TIMELINE_EXTENSION_FACTOR)
     % Calculate PAM lengths
     [muscle_length_pressurize, muscle_length_depressurize, muscle_length_pressurize_normalized, muscle_length_depressurize_normalized] = ...
-        calculate_pam_lengths(muscle_data, muscle_index, length_terminal_end, length_input_connector, contraction_ratio_pressurize, contraction_ratio_depressurize);
+        calculate_pam_lengths(muscle_data, muscle_index, LENGTH_TERMINAL_END, LENGTH_INPUT_CONNECTOR, contraction_ratio_pressurize, contraction_ratio_depressurize);
     
     % Fit curves
     muscle_data = fit_muscle_curves(muscle_data, muscle_index, air_pressure_MPa, air_pressure_range_MPa, ...
                                     muscle_length_pressurize_normalized, muscle_length_depressurize_normalized);
     
     % Determine pressure points
-    muscle_data = determine_pressure_points(muscle_data, muscle_index, timeline, timeline_extension_factor);
+    muscle_data = determine_pressure_points(muscle_data, muscle_index, timeline, TIMELINE_EXTENSION_FACTOR);
     
     % Calculate required pressure
     muscle_data = calculate_required_pressure(muscle_data, muscle_index, timeline_extended_one_cycle, air_pressure_range_MPa);
 end
 
 function [muscle_length_pressurize, muscle_length_depressurize, muscle_length_pressurize_normalized, muscle_length_depressurize_normalized] = ...
-    calculate_pam_lengths(muscle_data, muscle_index, length_terminal_end, length_input_connector, contraction_ratio_pressurize, contraction_ratio_depressurize)
+    calculate_pam_lengths(muscle_data, muscle_index, LENGTH_TERMINAL_END, LENGTH_INPUT_CONNECTOR, contraction_ratio_pressurize, contraction_ratio_depressurize)
     
     length_tendon = muscle_data{muscle_index, 3};
-    muscle_length_initial = muscle_data{muscle_index, 2} - (length_input_connector + length_terminal_end + length_tendon);
+    muscle_length_initial = muscle_data{muscle_index, 2} - (LENGTH_INPUT_CONNECTOR + LENGTH_TERMINAL_END + length_tendon);
     muscle_length_pressurize = (ones(size(contraction_ratio_pressurize)) - contraction_ratio_pressurize) * muscle_length_initial;
     muscle_length_depressurize = (ones(size(contraction_ratio_depressurize)) - contraction_ratio_depressurize) * muscle_length_initial;
-    muscle_length_pressurize_normalized = (muscle_length_pressurize + length_terminal_end + length_input_connector + length_tendon) / muscle_data{muscle_index, 2};
-    muscle_length_depressurize_normalized = (muscle_length_depressurize + length_terminal_end + length_input_connector + length_tendon) / muscle_data{muscle_index, 2};
+    muscle_length_pressurize_normalized = (muscle_length_pressurize + LENGTH_TERMINAL_END + LENGTH_INPUT_CONNECTOR + length_tendon) / muscle_data{muscle_index, 2};
+    muscle_length_depressurize_normalized = (muscle_length_depressurize + LENGTH_TERMINAL_END + LENGTH_INPUT_CONNECTOR + length_tendon) / muscle_data{muscle_index, 2};
 end
 
 function muscle_data = fit_muscle_curves(muscle_data, muscle_index, air_pressure_MPa, air_pressure_range_MPa, ...
@@ -75,7 +76,7 @@ function muscle_data = fit_muscle_curves(muscle_data, muscle_index, air_pressure
     muscle_data{muscle_index, 5} = polyval(coefficient_depressurize, air_pressure_range_MPa);
 end
 
-function muscle_data = determine_pressure_points(muscle_data, muscle_index, timeline, timeline_extension_factor)
+function muscle_data = determine_pressure_points(muscle_data, muscle_index, timeline, TIMELINE_EXTENSION_FACTOR)
     global_end_point = 1.7498;
     
     switch muscle_index
@@ -91,7 +92,7 @@ function muscle_data = determine_pressure_points(muscle_data, muscle_index, time
             pressurize_point_one_cycle = calculate_pressure_points_case5(global_end_point);
     end
     
-    muscle_data{muscle_index, 6} = pressurize_point_one_cycle * timeline_extension_factor;
+    muscle_data{muscle_index, 6} = pressurize_point_one_cycle * TIMELINE_EXTENSION_FACTOR;
 end
 
 function pressurize_point_one_cycle = calculate_pressure_points_case1(global_end_point)
@@ -171,18 +172,18 @@ function is_pressurize = update_is_pressurize(is_pressurize, muscle_length_at_ti
     end
 end
 
-function plot_and_export_results(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, timeline_extension_factor, PLOT_GRAPHS, SAVE_FIGURES)
+function plot_and_export_results(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, TIMELINE_EXTENSION_FACTOR, PLOT_GRAPHS, SAVE_FIGURES)
     for muscle_index = 2:11
         [time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods] = ...
             prepare_plot_data(muscle_data, muscle_index, timeline_extended_one_cycle, air_pressure_range_MPa);
         if PLOT_GRAPHS
             fig = create_figure();
             plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
-                             time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, timeline_extension_factor);
+                             time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR);
         end
         
         if SAVE_FIGURES
-        export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, timeline_extension_factor);
+        export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR);
         end    
     end
 end
@@ -207,11 +208,11 @@ function fig = create_figure()
 end
 
 function plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
-                          time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, timeline_extension_factor)
+                          time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR)
     figure(fig);
     % Plot normalized muscle lengths
     yyaxis left
-    xlabel("Time (" + string(timeline_extension_factor) + " times extended)" + " [ms]");
+    xlabel("Time (" + string(TIMELINE_EXTENSION_FACTOR) + " times extended)" + " [ms]");
     ylabel("Normalized muscle length (" + muscle_data{muscle_index, 1} + ")");
     ylim([0.8, 1]);
     hold on;
@@ -246,7 +247,7 @@ function plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_
     end
 end
 
-function export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, timeline_extension_factor)
+function export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR)
     % Prepare data for CSV export
     required_pressure_for_csv = ["Time [ms]"; "Pressure [MPa]"];
     for time_point_index = 1:length(time_point_two_periods)
@@ -255,7 +256,7 @@ function export_results(muscle_data, muscle_index, time_point_two_periods, requi
     end
 
     % Create a directory for saving figures if it doesn't exist
-    save_dir = fullfile('..', 'saved_figures', [num2str(timeline_extension_factor), '_times_extended']);
+    save_dir = fullfile('..', 'saved_figures', [num2str(TIMELINE_EXTENSION_FACTOR), '_times_extended']);
     if ~exist(save_dir, 'dir')
         mkdir(save_dir);
     end
