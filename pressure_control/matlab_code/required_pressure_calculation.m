@@ -9,10 +9,10 @@ load ('..\matlab_data\require_pressure_calculation_data.mat'); % Short ligaments
 
 % Plot and save options
 PLOT_GRAPHS = true;
-SAVE_FIGURES = true;
+SAVE_FIGURES = false;
 
 % Initialize constants
-TIMELINE_EXTENSION_FACTOR = 2; % Factor for extending time intervals
+TIMELINE_EXTENSION_FACTOR = 1; % Factor for extending time intervals
 LENGTH_TERMINAL_END = 6.5;
 LENGTH_INPUT_CONNECTOR = 12.1;
 timeline_extended_one_cycle = timeline * TIMELINE_EXTENSION_FACTOR; % Extend time intervals
@@ -26,7 +26,7 @@ for muscle_index = 2:11 % For all muscles
                                  contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, TIMELINE_EXTENSION_FACTOR);
 % Amplify CT's pressure
     if muscle_index == 11
-        muscle_data{muscle_index, 11} = muscle_data{muscle_index, 11} * 3;
+        muscle_data{muscle_index, 11} = muscle_data{muscle_index, 11} * 2;
     end
 end
 
