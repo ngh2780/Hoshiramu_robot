@@ -3,7 +3,9 @@ clear;
 close all;
 
 % Load data
-load ('..\matlab_data\require_pressure_calculation_data.mat');
+% load ('..\matlab_data\require_pressure_calculation_data.mat');
+load ('..\matlab_data\require_pressure_calculation_data.mat'); % Short ligaments
+
 
 % Plot and save options
 PLOT_GRAPHS = true;
