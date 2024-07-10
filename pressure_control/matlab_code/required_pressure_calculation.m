@@ -9,7 +9,9 @@ load ('..\matlab_data\require_pressure_calculation_data.mat'); % Short ligaments
 
 % Plot and save options
 PLOT_GRAPHS = true;
-SAVE_FIGURES = false;
+SAVE_FIGURES = true;
+PLOT_ALL_MUSCLES_SUBPLOT = false;
+EXPORT_VIDEO = true;
 
 % Initialize constants
 TIMELINE_EXTENSION_FACTOR = 1; % Factor for extending time intervals
@@ -24,14 +26,12 @@ for muscle_index = 2:11 % For all muscles
     muscle_data = process_muscle(muscle_data, muscle_index, LENGTH_TERMINAL_END, LENGTH_INPUT_CONNECTOR, ...
                                  air_pressure_MPa, air_pressure_range_MPa, contraction_ratio_pressurize, ...
                                  contraction_ratio_depressurize, timeline, timeline_extended_one_cycle, TIMELINE_EXTENSION_FACTOR);
-% Amplify CT's pressure
-    if muscle_index == 11
-        muscle_data{muscle_index, 11} = muscle_data{muscle_index, 11} * 2;
-    end
 end
-
 %% Plot and export results
 plot_and_export_results(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, TIMELINE_EXTENSION_FACTOR, PLOT_GRAPHS, SAVE_FIGURES);
+
+%% Create subplot figure with all muscles
+create_all_muscles_subplot(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, TIMELINE_EXTENSION_FACTOR, PLOT_ALL_MUSCLES_SUBPLOT);
 
 %% Clear unnecessary variables
 clearvars -except muscle_data air_pressure_MPa contraction_ratio_pressurize contraction_ratio_depressurize timeline
@@ -163,7 +163,15 @@ function muscle_data = calculate_required_pressure(muscle_data, muscle_index, ti
     muscle_data{muscle_index, 8} = pressurize_time_point;
     muscle_data{muscle_index, 9} = muscle_length_at_time_point;
     muscle_data{muscle_index, 10} = is_pressurize;
-    muscle_data{muscle_index, 11} = required_pressure;
+    % Amplify required pressures of IP, RF, and CT
+    if muscle_index == 2 || muscle_index == 6
+        amplification_factor = 0.5 / max(required_pressure); % Set the amplification so that the new maximum pressure is 0.5
+    elseif muscle_index == 11
+        amplification_factor = 2; % Set the amplification to increase the pressure by 2 times
+    else
+        amplification_factor = 1;
+    end
+    muscle_data{muscle_index, 11} = required_pressure * amplification_factor;
 end
 
 function is_pressurize = update_is_pressurize(is_pressurize, muscle_length_at_time_point)
@@ -179,16 +187,18 @@ function plot_and_export_results(muscle_data, timeline_extended_one_cycle, timel
         [time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods] = ...
             prepare_plot_data(muscle_data, muscle_index, timeline_extended_one_cycle, air_pressure_range_MPa);
         if PLOT_GRAPHS
-            fig = create_figure();
-            plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
-                             time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR);
+            % Replace create_figure() with direct figure creation
+            fig = figure('Units', 'normalized', 'OuterPosition', [0 0 1 1]);
+            plot_muscle_data(gca, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
+                             time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR, false);
         end
         
         if SAVE_FIGURES
-        export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR);
+            export_results(muscle_data, muscle_index, time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR);
         end    
     end
 end
+
 
 function [time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods] = ...
     prepare_plot_data(muscle_data, muscle_index, timeline_extended_one_cycle, air_pressure_range_MPa)
@@ -201,21 +211,24 @@ function [time_point_two_periods, muscle_length_time_point_two_periods, required
         time_point_two_periods = [0, time_point_two_periods];
         muscle_length_time_point_two_periods = [muscle_data{muscle_index, 7}(1), muscle_length_time_point_two_periods];
         [~, zero_time_point_index] = min(abs(muscle_data{muscle_index, 4} - muscle_data{muscle_index, 7}(1)));
-        required_pressure_two_periods = [air_pressure_range_MPa(zero_time_point_index), required_pressure_two_periods];
+        if ~isempty(zero_time_point_index) && zero_time_point_index <= length(air_pressure_range_MPa)
+            required_pressure_two_periods = [air_pressure_range_MPa(zero_time_point_index), required_pressure_two_periods];
+        else
+            required_pressure_two_periods = [required_pressure_two_periods(1), required_pressure_two_periods];
+        end
     end
 end
 
-function fig = create_figure()
-    fig = figure("units", "normalized", "outerposition", [0, 0, 1, 1]);
-end
-
-function plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
-                          time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR)
-    figure(fig);
+function plot_muscle_data(ax, muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
+                          time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR, is_subplot)
+    axes(ax);
     % Plot normalized muscle lengths
     yyaxis left
-    xlabel("Time (" + string(TIMELINE_EXTENSION_FACTOR) + " times extended)" + " [ms]");
-    ylabel("Normalized muscle length (" + muscle_data{muscle_index, 1} + ")");
+    muscle_name = muscle_data{muscle_index, 1};
+    if ~is_subplot
+        xlabel("Time (" + string(TIMELINE_EXTENSION_FACTOR) + " times extended)" + " [ms]");
+        ylabel("Normalized muscle length (" + muscle_name + ')');
+    end
     ylim([0.8, 1]);
     hold on;
     
@@ -231,21 +244,96 @@ function plot_muscle_data(fig, muscle_data, muscle_index, timeline_extended_one_
     p_approx.LineStyle = "-";
     p_approx.Marker = "o";
     p_approx.Color = p_original.Color;
-    xline(timeline_extended_one_cycle(end) * 1000, "--", string(round(timeline_extended_one_cycle(end) * 1000)), "FontSize", 14);
+    if is_subplot
+        xline(timeline_extended_one_cycle(end) * 1000, "--");
+    else
+        xline(timeline_extended_one_cycle(end) * 1000, "--", string(round(timeline_extended_one_cycle(end) * 1000)), "FontSize", 14);
+    end
 
     % Plot required air pressures
     yyaxis right
-    ylabel("Air pressure [MPa]");
+    if ~is_subplot
+        ylabel("Air pressure [MPa]");
+    end
+
     ylim([0, 0.5]);
     hold on;
     p_required_pressure = plot(time_point_two_periods * 1000, required_pressure_two_periods);
     p_required_pressure.LineWidth = 1.5;
     p_required_pressure.Marker = "*";
     
-    % Add text annotations
-    for time_point_index = 1:length(time_point_two_periods)
-        value_temp = [time_point_two_periods(time_point_index) * 1000, required_pressure_two_periods(time_point_index)];
-        text(value_temp(1), value_temp(2), sprintf("%.0f ms\n%.3f MPa", value_temp), 'Horiz','left', 'Vert','bottom');
+    % Add text annotations only if it's not a subplot
+    if ~is_subplot
+        for time_point_index = 1:length(time_point_two_periods)
+            value_temp = [time_point_two_periods(time_point_index) * 1000, required_pressure_two_periods(time_point_index)];
+            text(value_temp(1), value_temp(2), sprintf("%.0f ms\n%.3f MPa", value_temp), 'Horiz','left', 'Vert','bottom');
+        end
+    end
+end
+
+function create_all_muscles_subplot(muscle_data, timeline_extended_one_cycle, timeline_extended_two_cycles, air_pressure_range_MPa, TIMELINE_EXTENSION_FACTOR, PLOT_ALL_MUSCLES_SUBPLOT)
+    if PLOT_ALL_MUSCLES_SUBPLOT
+        fig = figure('Units', 'normalized', 'OuterPosition', [0 0 1 1]);
+        subplot_indices = [2:7, 10, 11]; % Exclude 8 and 9
+        num_subplots = length(subplot_indices);
+    
+        % Create subplots
+        for i = 1:num_subplots
+            muscle_index = subplot_indices(i);
+            ax(i) = subplot(4, 2, i);
+            [time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods] = ...
+                prepare_plot_data(muscle_data, muscle_index, timeline_extended_one_cycle, air_pressure_range_MPa);
+            plot_muscle_data(ax(i), muscle_data, muscle_index, timeline_extended_one_cycle, timeline_extended_two_cycles, ...
+                time_point_two_periods, muscle_length_time_point_two_periods, required_pressure_two_periods, TIMELINE_EXTENSION_FACTOR, true);
+            
+            % Set title
+            muscle_name = muscle_data{muscle_index, 1};
+            if muscle_index == 7
+                muscle_name = 'VL, VM, VI';
+            end
+            title(muscle_name, 'Interpreter', 'none');
+        end
+    
+        % Add time indicator
+        cycle_duration = timeline_extended_one_cycle(end);
+        total_duration = timeline_extended_two_cycles(end-3);
+        indicator_lines = gobjects(num_subplots, 1);
+        for i = 1:num_subplots
+            axes(ax(i));
+            indicator_lines(i) = xline(cycle_duration * 1000, 'r-', 'LineWidth', 2);
+        end
+    
+        % Animation settings
+        speed_factor = 2; % Adjust this to change animation speed, 2 is real-time
+        update_interval = 0.01; % Update interval in seconds
+    
+        % Get cycle durations
+        first_cycle_start = timeline_extended_one_cycle(1) * 1000; % Convert to milliseconds
+        first_cycle_end = timeline_extended_one_cycle(end) * 1000; % Convert to milliseconds
+        second_cycle_end = timeline_extended_two_cycles(end-3) * 1000; % Convert to milliseconds
+        total_duration = second_cycle_end - first_cycle_start;
+    
+        % Animation loop
+        tic; % Start timer
+        while true
+            elapsed_time = toc * speed_factor;
+            
+            % Calculate the current position
+            current_position = first_cycle_start + mod(elapsed_time * 1000, total_duration);
+
+            % If we've passed the first cycle, adjust to stay within the second cycle
+            if current_position > first_cycle_end
+                current_position = first_cycle_end + mod(current_position - first_cycle_end, second_cycle_end - first_cycle_end);
+            end
+            
+            % Update all indicator lines
+            for i = 1:num_subplots
+                indicator_lines(i).Value = current_position;
+            end
+            
+            drawnow;
+            pause(update_interval);
+        end
     end
 end
 
