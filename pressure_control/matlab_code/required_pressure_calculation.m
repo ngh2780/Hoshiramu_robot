@@ -163,15 +163,19 @@ function muscle_data = calculate_required_pressure(muscle_data, muscle_index, ti
     muscle_data{muscle_index, 8} = pressurize_time_point;
     muscle_data{muscle_index, 9} = muscle_length_at_time_point;
     muscle_data{muscle_index, 10} = is_pressurize;
+
     % Amplify required pressures of IP, RF, and CT
     if muscle_index == 2 || muscle_index == 6
         amplification_factor = 0.5 / max(required_pressure); % Set the amplification so that the new maximum pressure is 0.5
+        extra_amplification_factor = 1.35; % Set the additional amplification factor
     elseif muscle_index == 11
         amplification_factor = 2; % Set the amplification to increase the pressure by 2 times
+        extra_amplification_factor = 1;
     else
         amplification_factor = 1;
+        extra_amplification_factor = 1;
     end
-    muscle_data{muscle_index, 11} = required_pressure * amplification_factor;
+    muscle_data{muscle_index, 11} = min(required_pressure * amplification_factor * extra_amplification_factor, 0.5); % Set pressure not to exceed 0.5 MPa
 end
 
 function is_pressurize = update_is_pressurize(is_pressurize, muscle_length_at_time_point)
