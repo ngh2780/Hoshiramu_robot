@@ -1,7 +1,7 @@
 # Canine Musculoskeletal Robotic Platform for Veterinary Orthopedic Operations
 ### [Gihyeok Na](mailto:gihyeok2@illinois.edu), [Shoma Tanaka](mailto:tanaka.s.ca@m.titech.ac.jp), [Shiying Chen](mailto:b09502174@ntu.edu.tw), [Yasuji Harada](mailto:yasuji@nvlu.ac.jp), [Hiroyuki Nabae](mailto:nabae.h.aa@m.titech.ac.jp), and [Koichi Suzumori](mailto:suzumori.k.aa@m.titech.ac.jp)
 
-<img scr="./HoshiRamu.jpg">
+<img scr="HoshiRamu.jpg">
 
 ---
 
