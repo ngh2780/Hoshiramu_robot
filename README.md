@@ -276,7 +276,7 @@ $$L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right] \implies
         - 筋肉データ（全体長さまたは糸の長さ）が修正された場合，`\pressure_control\matlab_data\require_pressure_calculation_data.mat`を修正する．`initial total length`は筋肉全体の初期長さ，`total tendon length`は糸の総合長さである．
         - `PLOT_GRAPHS`，`SAVE_FIGURES`は`true`または`false`でグラフ表示，グラフ保存可否を設定できる．`PLOT_ALL_MUSCLE_SUBPLOT`と`EXPORT_VIDEO`昨日はまだ未完成である．
         - 時間の延長は`TIMELINE_EXTENSION_FACTOR`を調整する．1が元の時間スケールである．
-5. 求まって$P_i\left( t \right)$に元ついてマイクロコンピュータのプログラムを作成する．`\pressure_control\stm32_code`に保存されている．
+5. 求まった $P_i\left( t \right)$に元ついてマイクロコンピュータのプログラムを作成する．`\pressure_control\stm32_code`に保存されている．
     - コンパイル<u>時必ずファイル名を`main.cpp`に設定しなければならない．</u>そうしないと，エラーが出る．
     - 増幅回路の配線図は`\pressure_control\wiring_diagram_mirrored.png`である．左右反転されているため，半田付けの時容易である．
 
