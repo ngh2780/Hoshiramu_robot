@@ -251,7 +251,7 @@ function plot_muscle_data(ax, muscle_data, muscle_index, timeline_extended_one_c
     if is_subplot
         xline(timeline_extended_one_cycle(end) * 1000, "--");
     else
-        xline(timeline_extended_one_cycle(end) * 1000, "--", string(round(timeline_extended_one_cycle(end) * 1000)), "FontSize", 14);
+        xline(timeline_extended_one_cycle(end) * 1000, "--");
     end
 
     % Plot required air pressures
