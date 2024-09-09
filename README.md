@@ -249,11 +249,8 @@ Mode-Adaptive Neural Networks for Quadruped Motion Control"](https://starke-cons
 1. [3. 1. 骨格](#3-1-骨格)と[3. 2. 筋肉](#3-2-筋肉)で説明したOpenSim筋骨格モデルとモーションデータを用いてOpenSimで逆運動学解析を行う．
     - `\pressure_control\matlab_code\muscle_length_wrt_presusre.m`で可能な糸（腱）の最低長さを確認できる．実行し現れるグラフで，Min.より正規化された筋肉の長さの最小値が下になければならない．これを参考にして糸の長さを決定する．糸の長さはできるだけ短い方が望ましいが，干渉などを考慮して適切に決める必要がある．
 2. フレーム（連続時間）に対する各筋肉の長さ $L_{i}\left(t\right)$と3. 2. 3. 筋肉の長さ決定で得られた筋肉の初期長さ（自然長）$L_{i, 0}$，実験データから得られた空圧と筋肉の長さの関係 $L_{i}\left(P\right)$から特定の時間に加える空圧 $P_i\left(t\right)$を逆算できる．
-$$
-L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right]\\
-\\
-P_i\left(t\right) = \varepsilon\left[\frac{L_i\left(t\right)}{L_{i, 0}} \right]^{-1}
-$$
+$$L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right]$$
+$$P_i\left(t\right) = \varepsilon\left[\frac{L_i\left(t\right)}{L_{i, 0}} \right]^{-1}$$
 3. 加圧する特定の時刻 $t_j$を決める．$L_{i}\left(t\right)$の極大値・極小値を加圧の基準点とし，その時点で加圧かつその間を特定の間隔で分けて加圧時点 $t_j$を決定する．
     - $t_j$の決定は`\pressure_control\pressurize_time_point.xlsx`を参考にする．
     - 適切な $t_j$は適切に決められているが，修正が必要な場合，`\pressure_control\matlab_code\required_pressure_calculation.m`の以下の部分を修正すれば良い．
