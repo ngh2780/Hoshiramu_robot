@@ -248,17 +248,11 @@ Mode-Adaptive Neural Networks for Quadruped Motion Control"](https://starke-cons
 
 1. [3. 1. 骨格](#3-1-骨格)と[3. 2. 筋肉](#3-2-筋肉)で説明したOpenSim筋骨格モデルとモーションデータを用いてOpenSimで逆運動学解析を行う．
     - `\pressure_control\matlab_code\muscle_length_wrt_presusre.m`で可能な糸（腱）の最低長さを確認できる．実行し現れるグラフで，Min.より正規化された筋肉の長さの最小値が下になければならない．これを参考にして糸の長さを決定する．糸の長さはできるだけ短い方が望ましいが，干渉などを考慮して適切に決める必要がある．
-2. フレーム（連続時間）に対する各筋肉の長さ $L_{i}\left(t\right)$と3. 2. 3. 筋肉の長さ決定で得られた筋肉の初期長さ（自然長）$L_{i, 0}$，実験データから得られた空圧と筋肉の長さの関係 $L_{i}\left(P\right)$から特定の時間に加える空圧 $P_i\left(t\right)$を逆算できる．
-$$
-\begin{equation*}
-L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right]\\
-\end{equation*}
-\\
-\begin{equation*}
-P_i\left(t\right) = \varepsilon\left[\frac{L_i\left(t\right)}{L_{i, 0}} \right]^{-1}
-\end{equation*}
-$$
-3. 加圧する特定の時刻 $t_j$を決める．$L_{i}\left(t\right)$の極大値・極小値を加圧の基準点とし，その時点で加圧かつその間を特定の間隔で分けて加圧時点 $t_j$を決定する．
+2. フレーム（連続時間）に対する各筋肉の長さ $L_{i} \left( t \right)$と3. 2. 3. 筋肉の長さ決定で得られた筋肉の初期長さ（自然長） $L_{i,0}$，実験データから得られた空圧と筋肉の長さの関係 $L_{i}\left(P\right)$から特定の時間に加える空圧 $P_i\left(t\right)$を逆算できる．
+
+$$L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right] \implies P_i\left(t\right) = \varepsilon^{-1}\left[\frac{L_i\left(t\right)}{L_{i, 0}} \right]$$
+
+3. 加圧する特定の時刻 $t_j$を決める． $L_{i} \left( t \right)$の極大値・極小値を加圧の基準点とし，その時点で加圧かつその間を特定の間隔で分けて加圧時点 $t_j$を決定する．
     - $t_j$の決定は`\pressure_control\pressurize_time_point.xlsx`を参考にする．
     - 適切な $t_j$は適切に決められているが，修正が必要な場合，`\pressure_control\matlab_code\required_pressure_calculation.m`の以下の部分を修正すれば良い．
         ```
@@ -275,14 +269,14 @@ $$
         - `global_end_point`は一つ目の周期が終わる時点である．
         - `local_min_max_point`は極小値・極大値である．
         - `..._section`は基準時点（極小値・極大値）間の区切られた区画である．
-4. $P_i\left(t\right)$を計算する．
+4. $P_i\left( t \right)$を計算する．
     - `\pressure_control\matlab_code\required_pressure_calculation.m`を利用すると空圧ー収縮率の実験データと基準時点の正規化された筋肉の長さから加圧時点の空圧を計算できる．
         - 実験データから $\varepsilon\left(P\right)$を近似して計算に使う．
         - 人工筋の弛緩時と収縮時の区別は1（収縮）と0（弛緩）である．
         - 筋肉データ（全体長さまたは糸の長さ）が修正された場合，`\pressure_control\matlab_data\require_pressure_calculation_data.mat`を修正する．`initial total length`は筋肉全体の初期長さ，`total tendon length`は糸の総合長さである．
         - `PLOT_GRAPHS`，`SAVE_FIGURES`は`true`または`false`でグラフ表示，グラフ保存可否を設定できる．`PLOT_ALL_MUSCLE_SUBPLOT`と`EXPORT_VIDEO`昨日はまだ未完成である．
         - 時間の延長は`TIMELINE_EXTENSION_FACTOR`を調整する．1が元の時間スケールである．
-5. 求まって$P_i\left(t\right)$に元ついてマイクロコンピュータのプログラムを作成する．`\pressure_control\stm32_code`に保存されている．
+5. 求まった $P_i\left( t \right)$に元ついてマイクロコンピュータのプログラムを作成する．`\pressure_control\stm32_code`に保存されている．
     - コンパイル<u>時必ずファイル名を`main.cpp`に設定しなければならない．</u>そうしないと，エラーが出る．
     - 増幅回路の配線図は`\pressure_control\wiring_diagram_mirrored.png`である．左右反転されているため，半田付けの時容易である．
 
