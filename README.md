@@ -328,4 +328,4 @@ $$L_i\left(t\right) = L_{i, 0}\varepsilon\left[P_i\left(t\right)\right] \implies
         - `csv`ファイルを読み込んでデータを抽出し，自動で圧力と時間を変数として保存する．
         - MATLABで計算値ではなく，手動で圧力を調整したり，`TIMELINE_EXTENSION_FACTOR`を調整する場合は**必ず**`csv`ファイルを更新し，もう一度コンパイルして得られた`main.cpp`をマイクロコンピュータに入れる．
 
-# 歩行動作の比較
+# 5. 歩行動作の比較
