@@ -274,7 +274,7 @@ Mode-Adaptive Neural Networks for Quadruped Motion Control"](https://starke-cons
 - Tapと表記してあるところはねじ切り加工タップを利用して加工する．
 - ねじの規格のみ表記してあるところは追加でドリルで穴を拡張する必要がある．
 
-# 歩行動作の再現
+# 4. 歩行動作の再現
 以下の図は歩行動作の際限の基本的な方針または考え方である．この段階で必要な要素は基本的に`\pressure_control`に保存されている．
 <p align="center">
 <img width="100%" alt="pressure control diagram" src="https://github.com/user-attachments/assets/0592e693-a997-4d19-8837-3ceb1c7155c7">
