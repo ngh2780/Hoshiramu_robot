@@ -6,7 +6,7 @@ clear;
 load ('../matlab_data/muscle_length_and_joint_angle.mat');
 
 % Save option
-SAVE_FIGURES = true;
+SAVE_FIGURES = false;
 
 %% Data Preparation
 

@@ -3,13 +3,12 @@ clear;
 close all;
 
 % Load data
-% load ('..\matlab_data\require_pressure_calculation_data.mat');
 load ('..\matlab_data\require_pressure_calculation_data.mat'); % Short ligaments
 
 
 % Plot and save options
 PLOT_GRAPHS = true;
-SAVE_FIGURES = true;
+SAVE_FIGURES = false;
 PLOT_ALL_MUSCLES_SUBPLOT = false;
 EXPORT_VIDEO = true;
 
@@ -251,7 +250,7 @@ function plot_muscle_data(ax, muscle_data, muscle_index, timeline_extended_one_c
     if is_subplot
         xline(timeline_extended_one_cycle(end) * 1000, "--");
     else
-        xline(timeline_extended_one_cycle(end) * 1000, "--");
+        xline(timeline_extended_one_cycle(end) * 1000, "--", string(round(timeline_extended_one_cycle(end) * 1000)), "FontSize", 14);
     end
 
     % Plot required air pressures
