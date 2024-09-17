@@ -159,7 +159,7 @@ scaled_x2.5|2.5倍拡大されている
 11. Input connector add-onとInput connectorが接触するところに瞬間接着剤を塗布する．そうすると，人工筋モジュール一つが完成される．そして，事前に糸（腱）の長さに合わせて用意しておいたAnchor end-Terminal end add-onセットを人工筋モジュールに**接着剤を使わずに**結束させる．
 
 
-Anchor end-Terminal end add onセットの制作要領及び骨格絵の結合要領は以下の通りである．
+Anchor end-Terminal end add onセットの制作要領及び骨格への結合要領は以下の通りである．
 1. Anchor Endの溝に沿って**約1mm**の穴を開ける．<u>ラジオペンチなどでAnchor Endを固定してハンドドリルを使用ると容易になる．</u>同様にTerminal End Add-onにも穴を開ける．
 2. クレモナより糸（腱）でAnchor endとTerminal end add-onを結ぶ．<u>片方を先に結って長さに沿って印をつけてから作業した方が良い．</u>結び目に軽く瞬間接着剤を付けて固定させる．多数の人工筋が接続する部分は中間にExpansion Ring（4.8mm）を追加する．<u>この時，糸の長さは**腱全体の長さからExpansion Ringの外径を引いたもの**になることに注意する．</u>
 3. Anchor endが挿入される骨の穴に事前に瞬間接着剤を塗布する．そして，Anchor endをラジオペンチで押し込む．
