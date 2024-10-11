@@ -8,7 +8,7 @@ load ('..\matlab_data\require_pressure_calculation_data.mat'); % Short ligaments
 
 % Plot and save options
 PLOT_GRAPHS = true;
-SAVE_FIGURES = false;
+SAVE_FIGURES = true;
 PLOT_ALL_MUSCLES_SUBPLOT = false;
 EXPORT_VIDEO = true;
 
